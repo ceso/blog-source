@@ -1,0 +1,14 @@
+---
+install:
+  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.64.1/hugo_0.64.1_Linux-64bit.deb
+  - sudo dpkg -i /tmp/hugo.deb
+
+script:
+  - hugo -t hello-friend-ng
+
+deploy:
+  - provider: script
+    script: bash deploy.sh
+    skip_cleanup: true
+    on:
+      branch: master # or master if you are using the two-repository approach
