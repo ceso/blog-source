@@ -1,13 +1,14 @@
 +++
+date = "2020-04-07T02:30:30Z"
 tags = ["blog", "cheatsheet", "hacking", "linux", "windows", "exfiltration", "privilegeescalation"]
-title = "Hacki"
-images = ["https://ceso.github.io/images/htb/ai/ai-header.jpg"]
+title = "Hacking/OSCP cheatsheet"
+images = ["https://ceso.github.io/images/cheatsheet/banner.jpg"]
 description = "My humble cheatsheet of most used tools, webs, etc"
 toc = true
 +++
 
-# Intro
-Well, just finished my 90 days journey of OSCP labs, now here is my cheatsheet of it (and of hacking itself), I will be adding stuff in an incremental way as I go having time and/or learning new stuff.
+# Hacking/OSCP Cheatsheet
+Well, just finished my 90 days journey of OSCP labs, so now here is my cheatsheet of it (and of hacking itself), I will be adding stuff in an incremental way as I go having time and/or learning new stuff.
 But this is basically the tools I tend to relie and use in this way the most.
 Hope is helpfull for you!
 
@@ -237,3 +238,35 @@ Host foreman.example.mgmt
   ```console
   sshuttle -r foreman.example.mgmt -v 192.168.25.0/24 &
   ```
+
+  # Usefull links
+
+## Privilege escalation
+### Linux
+https://guif.re/linuxeop
+https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+https://www.win.tue.nl/~aeb/linux/hh/hh-8.html
+http://www.dankalia.com/tutor/01005/0100501004.htm
+
+### Windows
+http://www.fuzzysecurity.com/tutorials/16.html
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md
+https://github.com/ankh2054/windows-pentest
+https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html
+https://hackingandsecurity.blogspot.com/2017/09/oscp-windows-priviledge-escalation.html
+
+## Misc
+### Windows
+http://www.cheat-sheets.org/saved-copy/Windows_folders_quickref.pdf
+https://www.lemoda.net/windows/windows2unix/windows2unix.html
+https://bernardodamele.blogspot.com/2011/12/dump-windows-password-hashes.html
+
+### Linux
+http://www.pathname.com/fhs/pub/fhs-2.3.html
+https://github.com/rapid7/ssh-badkeys
+http://www.linusakesson.net/programming/tty/
+http://pentestmonkey.net/blog/post-exploitation-without-a-tty
+
+## Compiling exploits
+https://stackoverflow.com/questions/4032373/linking-against-an-old-version-of-libc-to-provide-greater-application-coverage
+https://www.lordaro.co.uk/posts/2018-08-26-compiling-glibc.html
