@@ -105,6 +105,12 @@ disableHugoGeneratorInject = false
 #    name = "stackoverflow"
 #    url  = "https://www.stackoverflow.com/"
 
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = [":git", "lastmod", "date", "publishDate"]
+publishDate = ["publishDate", "date"]
+expiryDate = ["expiryDate"]
+
 [languages]
   [languages.en]
     title  = "Ceso Adventures"
@@ -115,6 +121,10 @@ disableHugoGeneratorInject = false
     weight    = 2
 
 [menu]
+  [[menu.main]]
+    identifier = "cheatsheet"
+    name = "Cheatsheet"
+    url = "posts/2020/04/hacking/oscp-cheatsheet/"
   [[menu.main]]
     identifier = "about"
     name       = "About"
