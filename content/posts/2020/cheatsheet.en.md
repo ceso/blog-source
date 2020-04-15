@@ -701,19 +701,19 @@ msfvenom -p windows/exec -b '\x00\x0A' -f python --var-name buffer CMD=calc.exe 
 * https://www.lordaro.co.uk/posts/2018-08-26-compiling-glibc.html
 * https://www.offensive-security.com/metasploit-unleashed/alphanumeric-shellcode/
 
-## Obfuscators
+### Obfuscators
 
 * https://github.com/danielbohannon/Invoke-Obfuscation
 * https://github.com/Bashfuscator/Bashfuscator
 
-## Deobfuscators
+### Deobfuscators
 
 * https://www.unphp.net/
 * https://lelinhtinh.github.io/de4js/
 * http://jsnice.org/
 * https://github.com/java-deobfuscator/deobfuscator
 
-## Buffer Overflows
+### Buffer Overflows
 
 * https://github.com/justinsteven/dostackbufferoverflowgood
 * https://github.com/stephenbradshaw/vulnserver
