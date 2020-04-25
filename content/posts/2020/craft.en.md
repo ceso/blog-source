@@ -5,6 +5,9 @@ title = "Hack The Box - Craft"
 images = ["https://ceso.github.io/images/htb/craft/craft-header.jpg"]
 description = "My write-up / walkthrough for Craft from Hack The Box."
 toc = true
+aliases = [
+    "/hack-the-box/craft/"
+]
 +++
 {{< image src="/images/htb/craft/info-card.png" position="center" style="border-radius: 8px;" >}}
 

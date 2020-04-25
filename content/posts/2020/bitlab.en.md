@@ -6,6 +6,9 @@ title = "Hack The Box - Bitlab"
 images = ["https://ceso.github.io/images/htb/bitlab/bitlab-header.jpg"]
 description = "My write-up / walkthrough for Bitlab from Hack The Box."
 toc = true
+aliases = [
+    "/hack-the-box/bitlab/"
+]
 +++
 {{< image src="/images/htb/bitlab/info-card.png" position="center" style="border-radius: 8px;" >}}
 
