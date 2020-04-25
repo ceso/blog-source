@@ -5,6 +5,9 @@ title = "Hack The Box - AI"
 images = ["https://ceso.github.io/images/htb/ai/ai-header.jpg"]
 description = "My write-up / walkthrough for AI from Hack The Box."
 toc = true
+aliases = [
+    "/hack-the-box/ai/"
+]
 +++
 {{< image src="/images/htb/ai/info-card.png" position="center" style="border-radius: 8px;" >}}
 
