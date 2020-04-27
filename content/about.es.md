@@ -11,5 +11,5 @@ aliases = ["about-me", "contact"]
 * Nerd escalador uruguayo enamorado de estar aprendiendo cosas nuevas todo el tiempo
 * DevOps/Administrador de Sistemas Linux
 * Entusiasta en Ciberseguridad, queriendo saltar a esta en el futuro
-* Futuro OSCP
+* OSCP
 
