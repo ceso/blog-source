@@ -154,7 +154,7 @@ Now from here, my plans are keep learning more and more as I can about Infosec, 
 
 Thanks for reading until the end in case you were able to, and again as said at the beginning I really didn't want to do a "normal post", but more something of my own reflecting how do I feel and stuff I love to do. The name of the title is a reference to the chapter of a book, one I really like, and also I felt it goes well with this new world I'm trying to move, one where everything tends to be "dark" either from the impact it has on media (where terms are wrong used), and also I see it as a synonym of "deep", being there are some concepts that you need to "dig deep" to where is "dark" for stuff to click.
 
-### 111: One last tip
+## 111: One last tip
 
 Keep Trying, but keep trying harder, when you think there is no light and no hope, just don't give up, a lot of stuff can change in a few hours (I know it myself :P).
 Don't think of "Try Harder" as you need to exprime more your brain, but as don't giving up and giving all you have until the very last second if is needed, of course trying to not get burn out and keeping in mind you are doing it for fun, because you enjoy it.
@@ -162,4 +162,4 @@ Take rests, eat, be aware what you are lacking on your documentation and what is
 
 **But again most important: Keep trying harder!!**
 
-**Note: Please let me know any fix needed on the text or whatever, it also helps to keep improving my english :P**
+_Note: Please let me know any fix needed on the text or whatever, it also helps to keep improving my english :P_
