@@ -150,7 +150,7 @@ Take cheatsheets from other people, start figuring out what stuff is the one you
 ## 110: A look into the future
 
 Yesterday 2020/04/26 I woke up having a message from Off Sec saying I passed, such a good way to wake up, passing OSCP at my first attempt during one of the most shitty moments I have ever lived :).
-Now from here, my plans are keep learning more and more as I can about Infosec, my next goal is to learn some basics of Binary Analysis/Reverse Engineering as also learn more in deep about Active Directory attacks as attacks to Clouds (either AWS/Azure/GCP), whichever it is, there is going to be a huge puzzle ahead, a neverending learning, and is there anything better than that? I don't really think so...
+Now from here, my plans are keep learning more and more as I can about Infosec (HTB FTW), my next goal is to learn some basics of Binary Analysis/Reverse Engineering as also learn more in deep about Active Directory attacks as attacks to Clouds (either AWS/Azure/GCP), whichever it is, there is going to be a huge puzzle ahead, a neverending learning, and is there anything better than that? I don't really think so...
 
 Thanks for reading until the end in case you were able to, and again as said at the beginning I really didn't want to do a "normal post", but more something of my own reflecting how do I feel and stuff I love to do. The name of the title is a reference to the chapter of a book, one I really like, and also I felt it goes well with this new world I'm trying to move, one where everything tends to be "dark" either from the impact it has on media (where terms are wrong used), and also I see it as a synonym of "deep", being there are some concepts that you need to "dig deep" to where is "dark" for stuff to click.
 
