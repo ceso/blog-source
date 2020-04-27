@@ -90,7 +90,7 @@ Finally, the 2020/04/11 I started doing a livestream on youtube, and ended rooti
 When I started my notes were pure shit, I'm sure they still are, but are way better than what they were before. For taking/keeping notes through all the PWK and OSCP, I used Cherrytree, I started with [this template](https://411hall.github.io/assets/files/CTF_template.ctb), but as I moved forward and my own methodology started to develop I modified some stuff, the result was having this template:
 
 ```console
-https://ceso.github.io/static/files/oscp/template_pwk.ctb
+https://ceso.github.io/files/oscp/template_pwk.ctb
 ```
 
 **Note:** Something I didn't know during the exam, is that in the past some pepole has lost their notes of Cherrytree because the files got corrupted, then they were unable to  prepare their reports, my advice then is, maybe start with Cherrytree, and as time moves on, switch to some another tool for notetaking, such as [joplin](https://joplinapp.org/) or [Notion](https://notion.so/) to mention two examples, you will already have some methodology developed or starting to, so it will be easier to create a template adapted to yourself.
@@ -108,13 +108,13 @@ If you want to read a bit more in deep about this, I recommend you to read [this
 This is the PDF report of the simulation done at the Live Streaming on Youtube:
 
 ```console
-https://ceso.github.io/static/files/oscp/OSCP-OS-42-Simulation-Report.pdf
+https://github.com/ceso/ceso.github.io/blob/master/files/oscp/OSCP-OS-42-Simulation-Report.pdf
 ```
 
 And this, is the markdown code to generate the PDF above:
 
 ```console
-https://ceso.github.io/static/files/oscp/OSCP-OS-42-Simulation-Report.md)
+https://github.com/ceso/ceso.github.io/blob/master/files/oscp/OSCP-OS-42-Simulation-Report.md
 ```
 
 ## 100: 20200418 - The Big Day
@@ -138,7 +138,7 @@ Through all the exam, I took a lot of short rests of sometimes 10 minutes, somet
 Talking a bit on the official chat of HTB, I was told that all the community thinks that when you get half-user, that's half the points, so I ended with the thought I got 90 pts, as the remaining 20 pts, I got the user, but not the root (even if I wasn't able to do PE, in my report I included all my findings and personal thoughts about it).
 
 ```console
-ONCE certificate arrives, photo will behere
+ONCE certificate arrives, photo will be here
 ```
 
 ## 101: Cheatsheet
@@ -149,7 +149,7 @@ Take cheatsheets from other people, start figuring out what stuff is the one you
 
 ## 110: A look into the future
 
-Yesterday 2020/04/26 I woke up having a message from Off Sec saying I passed, such good way to wake up, passing OSCP at my first attempt during one of the most shitty moments I have ever lived :).
+Yesterday 2020/04/26 I woke up having a message from Off Sec saying I passed, such a good way to wake up, passing OSCP at my first attempt during one of the most shitty moments I have ever lived :).
 Now from here, my plans are keep learning more and more as I can about Infosec, my next goal is to learn some basics of Binary Analysis/Reverse Engineering as also learn more in deep about Active Directory attacks as attacks to Clouds (either AWS/Azure/GCP), whichever it is, there is going to be a huge puzzle ahead, a neverending learning, and is there anything better than that? I don't really think so...
 
 Thanks for reading until the end in case you were able to, and again as said at the beginning I really didn't want to do a "normal post", but more something of my own reflecting how do I feel and stuff I love to do. The name of the title is a reference to the chapter of a book, one I really like, and also I felt it goes well with this new world I'm trying to move, one where everything tends to be "dark" either from the impact it has on media (where terms are wrong used), and also I see it as a synonym of "deep", being there are some concepts that you need to "dig deep" to where is "dark" for stuff to click.
