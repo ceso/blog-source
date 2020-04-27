@@ -133,6 +133,8 @@ Once ended with this, I came back to the game trying the root on the remaining 2
 
 I took a nap of around 1 hour, and I had some lunch, from this I started to work on my report, when I realized I had it finished at 4 am, I reviewed it around 4 or 5 times, and went to sleep. Next day I did some more reviews and finally submitted it around 10 am, so between the 18 and 20, I only slept around 5/6 hs with luck.
 
+Through all the exam, I took a lot of short rests of sometimes 10 minutes, sometimes 30 minutes, at some moments every 2 hours at others every 3 hours, you will notice when you need to take a break, just make sure you take them, don't let your self fall into the tempting of not doing it, thinking it will save you time, a break is important as keep pushing.
+
 Talking a bit on the official chat of HTB, I was told that all the community thinks that when you get half-user, that's half the points, so I ended with the thought I got 90 pts, as the remaining 20 pts, I got the user, but not the root (even if I wasn't able to do PE, in my report I included all my findings and personal thoughts about it).
 
 ```console
@@ -147,9 +149,17 @@ Take cheatsheets from other people, start figuring out what stuff is the one you
 
 ## 110: A look into the future
 
-Yesterday 2020/04/26 I woke up having a message from Off Sec saying I passed, such good way to wake up.
+Yesterday 2020/04/26 I woke up having a message from Off Sec saying I passed, such good way to wake up, passing OSCP at my first attempt during one of the most shitty moments I have ever lived :).
 Now from here, my plans are keep learning more and more as I can about Infosec, my next goal is to learn some basics of Binary Analysis/Reverse Engineering as also learn more in deep about Active Directory attacks as attacks to Clouds (either AWS/Azure/GCP), whichever it is, there is going to be a huge puzzle ahead, a neverending learning, and is there anything better than that? I don't really think so...
 
 Thanks for reading until the end in case you were able to, and again as said at the beginning I really didn't want to do a "normal post", but more something of my own reflecting how do I feel and stuff I love to do. The name of the title is a reference to the chapter of a book, one I really like, and also I felt it goes well with this new world I'm trying to move, one where everything tends to be "dark" either from the impact it has on media (where terms are wrong used), and also I see it as a synonym of "deep", being there are some concepts that you need to "dig deep" to where is "dark" for stuff to click.
+
+### 111: One last tip
+
+Keep Trying, but keep trying harder, when you think there is no light and no hope, just don't give up, a lot of stuff can change in a few hours (I know it myself :P).
+Don't think of "Try Harder" as you need to exprime more your brain, but as don't giving up and giving all you have until the very last second if is needed, of course trying to not get burn out and keeping in mind you are doing it for fun, because you enjoy it.
+Take rests, eat, be aware what you are lacking on your documentation and what is excessing, learn to be self-aware of your weakness (mind SQLI and Windows).
+
+**But again most important: Keep trying harder!!**
 
 **Note: Please let me know any fix needed on the text or whatever, it also helps to keep improving my english :P**
