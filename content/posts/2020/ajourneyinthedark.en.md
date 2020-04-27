@@ -15,7 +15,7 @@ This is the story of how I got my OSCP coming from a background as Linux Sysadmi
 
 Every tale where there is an adventurer, starts with him (the adventurer) and his friends, these who share the journey providing support and advice through it, as the story moves forward, new characters tend to appear, joining the adventurer in his travel.
 
-This story is no less , then than anything thanks to my buddies [r0xas](https://www.hackthebox.eu/home/users/profile/186934), [MrBulldops](https://www.hackthebox.eu/home/users/profile/12286), [0x41](https://twitter.com/tagnullde) and [DutchPyro](https://www.hackthebox.eu/home/users/profile/43855), for helping and still help me in this adventures and the ones that will came.
+This story is no less , then before than anything thanks to my buddies [r0xas](https://www.hackthebox.eu/home/users/profile/186934), [MrBulldops](https://www.hackthebox.eu/home/users/profile/12286), [0x41](https://twitter.com/tagnullde) and [DutchPyro](https://www.hackthebox.eu/home/users/profile/43855), for helping and still help me in this adventures and the ones that will came.
 And most than anything [Mauri](https://www.linkedin.com/in/mquerves/) because you just convinced to stop shitting myself, from "I can't" to "I can".
 
 _By the way, I really really love books (guess why the title of the post!), and I'm really happy getting this cert during this C-19 thing (living abroad at this time, is though), so I just wanted to make this post in the way it makes me the happiest._
@@ -30,7 +30,7 @@ I don't hold any kind of degree most than High School. I started university but 
 ## 001: My preparation
 
 I always felt attracted to security but never felt confident to actually start learning about it, until November of last year that Mauri just made me make my mind. From this I started playing a bit in Hack The Box, all the time using hints, watching [Ippsec videos](https://ippsec.rocks/) or learning new stuff by reading machine write-ups by [0xrick](0xrick.github.io/) and by [0xdf](0xdf.gitlab.io/).
-I did (in this order): Postman, Traverxec, Lame, Bitlab, Bashed, Obscurity, Mango, AI and Craft (first one without hints), tried to do OpenAdmin but was unable to get the second user without hints, I decided I did not want to read more hints, so just put it for later.
+I did (in this order): Postman, Traverxec, Lame, Bitlab, Bashed, Obscurity, Mango, AI and Craft (first one without hints), tried to do OpenAdmin but was unable to get the second user without hints, I decided I did not want to read more hints, so just put it for later (after PWK was pretty easy :D).
 
 I got 90 days and my lab time started the 5th of January, my way of approaching it was:
 
