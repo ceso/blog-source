@@ -81,6 +81,12 @@ Days before the exam I asked to be chosen random machines from the list of alike
 - Arctic - 20 pts
 - Optimum - 10 pts
 
+Something important to remark, the windows machine I used to the development of the exploit (BOF) was a free one provided by Microsoft that has a valid time of 3 months, so more than enough for this, it can be downloaded here:
+
+```console
+https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/
+```
+
 Finally, the 2020/04/11 I started doing a livestream on youtube, and ended rooting all the machines in around 14 hs. **Worth to mention I cut the live stream at around those 14 hs, but youtube only uploaded 12 hs of video, this also was the first time I was streaming something and I didn't know OBS by default didn't do a recording of the videos while streaming, so I don't have the original video to upload the 2 hs missing, but if wanted I just can record that missing parts**, said that, the streaming:
 
 {{< youtube FwZc6JigIcE >}}
