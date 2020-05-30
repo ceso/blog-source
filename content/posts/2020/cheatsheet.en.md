@@ -123,6 +123,19 @@ Web fuzzer, [you can get fuff here](https://github.com/ffuf/ffuf), it basically 
 ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u http://192.168.24.24/FUZZ
 ```
 
+### Most usefull dictionaries (OSCP/HTB)
+
+```console
+/usr/share/wordlists/rockyou.txt
+/usr/share/wordlists/wfuzz/others/common_pass.txt
+
+In seclists-pkg:
+
+/usr/share/seclists/Passwords/Default-Credentials/tomcat-betterdefaultpasslist.txt
+/usr/share/seclists/Passwords/Leaked-Databases/alleged-gmail-passwords.txt
+/usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt
+```
+
 ### Samba
 
 #### smbclient 
