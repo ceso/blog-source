@@ -143,9 +143,7 @@ Through all the exam, I took a lot of short rests of sometimes 10 minutes, somet
 
 Talking a bit on the official chat of HTB, I was told that all the community thinks that when you get half-user, that's half the points, so I ended with the thought I got 90 pts (instead the 80 I thought at first), as the remaining 20 pts, I got the user, but not the root (even if I wasn't able to do PE, in my report I included all my findings and personal thoughts about it).
 
-```console
-ONCE certificate arrives, photo will be here
-```
+{{< image src="/images/blog/oscp/certificate.jpg" position="center" style="border-radius: 8px;" >}}
 
 ## 101: Cheatsheet
 
