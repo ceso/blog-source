@@ -12,4 +12,3 @@ aliases = ["about-me", "contact"]
 * DevOps/Administrador de Sistemas Linux
 * Entusiasta en Ciberseguridad, queriendo saltar a esta en el futuro
 * OSCP
-
