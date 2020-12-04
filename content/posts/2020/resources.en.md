@@ -1,5 +1,5 @@
 +++
-date = "2020-04-07T02:30:30Z"
+date = "2020-12-04"
 tags = ["blog", "resources", "hacking", "linux", "windows", "exfiltration", "privilegeescalation", "bugbounty", "books", "learning", "articles", "techniques", "vectors"]
 title = "Hacking Resources"
 images = ["https://ceso.github.io/images/cheatsheet/banner.jpg"]
