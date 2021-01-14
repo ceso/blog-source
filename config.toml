@@ -124,7 +124,7 @@ expiryDate = ["expiryDate"]
   [[menu.main]]
     identifier = "resources"
     name = "Resources"
-    url = "posts/2020/12/hacking/resources/"
+    url = "posts/2020/12/hacking-resources/"
   [[menu.main]]
     identifier = "cheatsheet"
     name = "Cheatsheet"
