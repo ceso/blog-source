@@ -57,6 +57,18 @@ toc = true
 * https://bernardodamele.blogspot.com/2011/12/dump-windows-password-hashes.html
 * https://malicious.link/post/2016/kerberoast-pt1/
 
+#### Exploit Development/Reversing
+
+* https://www.shogunlab.com/blog/2017/08/11/zdzg-windows-exploit-0.html
+* https://n4r1b.netlify.app/posts/2020/01/dissecting-the-windows-defender-driver-wdfilter-part-1/
+* https://www.forrest-orr.net/post/malicious-memory-artifacts-part-i-dll-hollowing
+
+
+#### Active Directory
+
+* https://malicious.link/post/2016/kerberoast-pt1/ **<------ Serie about Kerberoasting (5 pts)**
+* https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
+
 #### Linux stuff
 
 * http://www.pathname.com/fhs/pub/fhs-2.3.html
@@ -109,6 +121,7 @@ toc = true
 * https://github.com/tagnullde/OSCP/blob/master/oscp-cheatsheet.md
 * https://github.com/Optixal/OSCP-PWK-Notes-Public 
 * https://github.com/OlivierLaflamme/Cheatsheet-God
+* https://github.com/sinfulz/JustTryHarder/
 * https://github.com/0x4D31/awesome-oscp
 * https://github.com/xapax/security
 * https://book.hacktricks.xyz/
@@ -119,15 +132,22 @@ toc = true
 * https://www.inteltechniques.com/podcast.html
 * https://darknetdiaries.com/
 
+#### Cobalt Strike
+
+* https://github.com/S1ckB0y1337/Cobalt-Strike-CheatSheet
+
 #### Bug Bounty/Web Security
 
 * https://owasp.org/www-project-top-ten/
 * https://github.com/OWASP/wstg
 * https://github.com/swisskyrepo/PayloadsAllTheThings/
+* https://tomnomnom.com/talks/bug-bounties-with-bash-virsec.pdf
+* https://docs.google.com/presentation/d/1DAQ47VjIaQZ88Ly00eGPQupq79hAF9AAZstV7OVCY_8
 * https://github.com/ngalongc/bug-bounty-reference
 * https://gowsundar.gitbook.io/book-of-bugbounty-tips
 * https://github.com/jdonsec/AllThingsSSRF
 * https://github.com/jdonsec/AllThingsXXE
+* https://xsleaks.com/
 * https://www.reddit.com/r/bugbounty/comments/983odf/how_to_become_a_bug_bounty_hunter/
 * https://mohemiv.com/all/exploiting-xxe-with-local-dtd-files/
 
