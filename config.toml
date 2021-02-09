@@ -4,7 +4,7 @@ DefaultContentLanguage = "en"
 
 theme = "hello-friend-ng"
 
-rssLimit  = 10  # Maximum number of items in the RSS feed.
+rssLimit  = 11  # Maximum number of items in the RSS feed.
 
 archetypeDir = "archetypes"
 contentDir   = "content"
@@ -24,7 +24,7 @@ enableRobotsTXT = false
 enableGitInfo   = true
 enableEmoji     = false
 enableMissingTranslationPlaceholders = false
-disableRSS     = true
+disableRSS     = false
 disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
@@ -47,7 +47,7 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   description = "Security CTFs, Tutorials and Blogs"
-  keywords = "CTF, Security, HTB, blog, infosec"
+  keywords = "CTF, Security, HTB, Blog, Infosec"
 
   realName = "Leandro Lemos"
 
