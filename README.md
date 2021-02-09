@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ceso/blog-source.svg?branch=master)](https://travis-ci.org/ceso/ceso-blog)
+[![Build Status](https://github.com/ceso/blog-source/workflows/github%20pages/badge.svg)
 
 # Blog source
 This repo contains all the source hugo conf files of my [blog](https://ceso.github.io/).
