@@ -7,6 +7,10 @@ description = "Just another list containing links to usefull hacking stuff"
 toc = true
 +++
 
+# Hacking Resources
+
+This isn't more than another hacking resources list. I basically throw here every resource I get interested on taking a look/playing with it, or stuff that I use as a reference while trying to break something.
+
 #### Usefull Web Browser plugins
 
 * https://www.wappalyzer.com/download/
