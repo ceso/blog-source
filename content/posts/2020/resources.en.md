@@ -26,6 +26,11 @@ toc = true
 * https://crt.sh
 * https://dnsdumpster.com/
 * https://mxtoolbox.com/
+* https://github.com/OWASP/owasp-mstg/tree/master/Crackmes
+* https://github.com/oversecured/ovaa
+* https://github.com/OWASP/NodeGoat
+* https://owasp.org/www-project-juice-shop/
+* https://portswigger.net/web-security
 
 #### Linux Privilege Escalation
 
@@ -119,8 +124,8 @@ toc = true
 #### General Hacking Cheatsheets/Cool Articles/Podcasts
 
 * https://github.com/tagnullde/OSCP/blob/master/oscp-cheatsheet.md
-* https://github.com/Optixal/OSCP-PWK-Notes-Public 
-* https://github.com/OlivierLaflamme/Cheatsheet-God
+* https://github.com/Optixal/OSCP-PWK-Notes-Public/
+* https://github.com/OlivierLaflamme/Cheatsheet-God/
 * https://github.com/sinfulz/JustTryHarder/
 * https://github.com/0x4D31/awesome-oscp
 * https://github.com/xapax/security
@@ -148,6 +153,7 @@ toc = true
 * https://github.com/jdonsec/AllThingsSSRF
 * https://github.com/jdonsec/AllThingsXXE
 * https://xsleaks.com/
+* https://blog.usejournal.com/bug-hunting-methodology-part-1-91295b2d2066/
 * https://www.reddit.com/r/bugbounty/comments/983odf/how_to_become_a_bug_bounty_hunter/
 * https://mohemiv.com/all/exploiting-xxe-with-local-dtd-files/
 
