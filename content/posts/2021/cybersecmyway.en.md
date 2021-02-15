@@ -3,6 +3,9 @@ tags = ["blog","thoughts","cybersecurity","learning"]
 date = "2021-02-14T16:00:00Z"
 title = "Q3liZXJzZWMgbXkgd2F 5IC0gUGFydCAxCg=="
 images = ["https://ceso.github.io/images/blog/cybersecmyway/banner.jpg"]
+aliases = [
+    "/q3lizxjzzwmgbxkgd2f5ic0gugfydcaxcg/"
+]
 description = "An insight about how I'm learning Cybersec"
 +++
 
