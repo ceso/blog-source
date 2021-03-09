@@ -21,13 +21,16 @@ This isn't more than another hacking resources list. I basically throw here ever
 
 #### Cool Tools/Labs
 
+* https://hackthebox.eu/
+* https://www.vulnhub.com/
 * https://www.blacklanternsecurity.com/2020-12-02-WriteHat/
 * https://github.com/madhuakula/kubernetes-goat
 * https://github.com/m8r0wn/ActiveReign
 * https://github.com/sundowndev/PhoneInfoga
 * https://github.com/GoSecure/dtd-finder
 * https://www.shodan.io/
-* https://crt.sh
+* https://crt.sh/
+* https://censys.io/
 * https://dnsdumpster.com/
 * https://mxtoolbox.com/
 * https://github.com/OWASP/owasp-mstg/tree/master/Crackmes
@@ -71,12 +74,6 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://www.shogunlab.com/blog/2017/08/11/zdzg-windows-exploit-0.html
 * https://n4r1b.netlify.app/posts/2020/01/dissecting-the-windows-defender-driver-wdfilter-part-1/
 * https://www.forrest-orr.net/post/malicious-memory-artifacts-part-i-dll-hollowing
-
-
-#### Active Directory
-
-* https://malicious.link/post/2016/kerberoast-pt1/ **<------ Serie about Kerberoasting (5 pts)**
-* https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
 
 #### Linux stuff
 
@@ -140,6 +137,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://jhalon.github.io/becoming-a-pentester/
 * https://www.inteltechniques.com/podcast.html
 * https://darknetdiaries.com/
+* https://lobuhisec.medium.com/kubernetes-pentest-recon-checklist-tools-and-resources-30d8e4b69463
 
 #### Cobalt Strike
 
@@ -148,6 +146,8 @@ This isn't more than another hacking resources list. I basically throw here ever
 #### Bug Bounty/Web Security
 
 * https://owasp.org/www-project-top-ten/
+* https://www.hackerone.com/blog/Guide-Subdomain-Takeovers
+* https://0xpatrik.com/subdomain-takeover-ns/
 * https://github.com/OWASP/wstg
 * https://github.com/swisskyrepo/PayloadsAllTheThings/
 * https://tomnomnom.com/talks/bug-bounties-with-bash-virsec.pdf
@@ -157,15 +157,20 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://github.com/jdonsec/AllThingsSSRF
 * https://github.com/jdonsec/AllThingsXXE
 * https://xsleaks.com/
-* https://blog.usejournal.com/bug-hunting-methodology-part-1-91295b2d2066/
 * https://www.reddit.com/r/bugbounty/comments/983odf/how_to_become_a_bug_bounty_hunter/
 * https://mohemiv.com/all/exploiting-xxe-with-local-dtd-files/
-
+* https://blog.usejournal.com/bug-hunting-methodology-part-1-91295b2d2066 **<------ Serie of 3 post about Bug Hunting Methodology **
+* https://github.com/ngalongc/bug-bounty-reference
+* https://pentester.land/list-of-bug-bounty-writeups.html
 
 #### Red Team Resources
 
 * https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki
-* 
+* https://www.ired.team/
+* https://www.harmj0y.net/blog/ **<------ Awesome Active Directory Posts **
+* https://malicious.link/post/2016/kerberoast-pt1/ **<------ Serie about Kerberoasting (5 posts)**
+* https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
+
 
 #### Cool presentations/videos
 
@@ -174,9 +179,38 @@ This isn't more than another hacking resources list. I basically throw here ever
 * A $7.500 BUG BOUNTY Bug Explained, step by step. (Blind XXE OOB over DNS) - STOK https://www.youtube.com/watch?v=aSiIHKeN3ys&t=26s&pbjreload=101
 * GitHub Recon and Sensitive Data Exposure https://youtu.be/l0YsEk_59fQ
 * Cracking the Lens: Targeting HTTP's Hidden Attack-Surface https://www.youtube.com/watch?v=zP4b3pw94s0
+* How to Crush Bug Bounties in the first 12 Months https://www.youtube.com/watch?v=AbebbJ3cRLI
+* The Bug Hunter's Methodology v4.0 - Recon Edition by @jhaddix​ at #NahamCon2020​ https://youtu.be/p4JgIu1mceI
+* How i became a HackerOne MVH without writing a single line of python (Motivational talk) by STOK https://youtu.be/4YjCta2fcbw
+* My Journey to Cybersecurity CIA Keynote - Heath Adams (aka The Cyber Mentor) https://www.youtube.com/watch?v=q4h8A5dQsZw
 
 #### Cool Books
 
 * https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470
 * https://www.amazon.com/Real-World-Bug-Hunting-Field-Hacking/dp/1593278616/
 * https://www.amazon.com/How-Linux-Works-2nd-Superuser/dp/1593275676/
+
+#### Hackers to follow on twitter (it's a really awesome way to learn as well!. Will keep adding them)
+
+* securibee: https://twitter.com/securibee
+* codingo_: https://twitter.com/codingo_
+* hakluke: https://twitter.com/hakluke
+* JackRhysider: https://twitter.com/JackRhysider
+* Orange Tsai: https://twitter.com/orange_8361
+* MalwareTech: https://twitter.com/MalwareTechBlog
+* TomTomNom: https://twitter.com/TomNomNom
+* Jason Haddix: https://twitter.com/Jhaddix
+* NahamSec: https://twitter.com/NahamSec
+* STOK: https://twitter.com/stokfredrik
+* John Hammond: https://twitter.com/_johnhammond
+* Jake Williams: https://twitter.com/MalwareJake
+* Deviant Ollman: https://twitter.com/deviantollam
+* J3rryBl4nks: https://twitter.com/JBl4nks
+* Tib3rius: https://twitter.com/0xTib3rius
+* TheColonial: https://twitter.com/TheColonial
+* Rob Fuller: https://twitter.com/mubix
+* g0tmi1k: https://twitter.com/g0tmi1k
+* TJ_Null: https://twitter.com/TJ_Null
+* Rasta Mouse: https://twitter.com/_RastaMouse
+* ippsec: https://twitter.com/ippsec
+* Chema Alonso: https://twitter.com/chemaalonso
