@@ -101,9 +101,13 @@ disableHugoGeneratorInject = false
     name = "linkedin"
     url  = "https://www.linkedin.com/in/lemosleandro"
 
-#  [[params.social]]
-#    name = "stackoverflow"
-#    url  = "https://www.stackoverflow.com/"
+  [[params.social]]
+    name = "twitch"
+    url  = "https://www.twitch.tv/0xc350"
+
+  [[params.social]]
+    name = "youtube"
+    url  = "https://youtube.com/c/LeandroLemos"
 
 [frontmatter]
 date = ["date", "publishDate", "lastmod"]
@@ -129,6 +133,10 @@ expiryDate = ["expiryDate"]
     identifier = "cheatsheet"
     name = "Cheatsheet"
     url = "posts/2020/04/hacking/oscp-cheatsheet/"
+  [[menu.main]]
+    identifier = "presentations/streamings"
+    name = "Presentations/Streamings"
+    url = "posts/2021/03/presentations-and-streamings/"
   [[menu.main]]
     identifier = "about"
     name       = "About"
