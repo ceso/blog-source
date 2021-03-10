@@ -1,13 +1,13 @@
 +++
 date = "2021-03-07T02:30:30Z"
-tags = ["blog", "hacking", "learning", "cybersecurity", "streaming", "presentations"]
-title = "Presentations and Streamings"
+tags = ["blog", "hacking", "learning", "cybersecurity", "videos", "aws", "streaming", "presentations"]
+title = "My Videos"
 images = ["https://ceso.github.io/images/cheatsheet/banner.jpg"]
 description = "A compilation of videos from Presentations/Live Streamings given my me"
-toc = true
+toc = false
 +++
 
-# Presentations/Streamings
+# My Videos
 
 A compilation of videos from Presentations/Live Streamings given my me.
 
