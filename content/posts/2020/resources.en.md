@@ -69,6 +69,10 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://bernardodamele.blogspot.com/2011/12/dump-windows-password-hashes.html
 * https://malicious.link/post/2016/kerberoast-pt1/
 
+#### Powershell
+
+* https://vipulvyas0813.medium.com/introduction-to-powershell-for-penetration-testing-733236bc9547 **<------ Serie about Poershell for Penetration Testing (5 posts)**
+
 #### Exploit Development/Reversing
 
 * https://www.shogunlab.com/blog/2017/08/11/zdzg-windows-exploit-0.html
@@ -78,7 +82,6 @@ This isn't more than another hacking resources list. I basically throw here ever
 #### Linux stuff
 
 * http://www.pathname.com/fhs/pub/fhs-2.3.html
-* https://github.com/rapid7/ssh-badkeys
 * http://www.linusakesson.net/programming/tty/
 * http://pentestmonkey.net/blog/post-exploitation-without-a-tty
 
@@ -162,8 +165,40 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://blog.usejournal.com/bug-hunting-methodology-part-1-91295b2d2066 **<------ Serie of 3 post about Bug Hunting Methodology **
 * https://github.com/ngalongc/bug-bounty-reference
 * https://pentester.land/list-of-bug-bounty-writeups.html
+* https://twitter.com/FaniMalikHack/status/1355145481479999488 **<------ Tweet by @FaniMalikHack with an infographic about JWT  **
 
-#### Red Team Resources
+#### Subdomain finders
+
+* https://github.com/projectdiscovery/subfinder
+* https://github.com/guelfoweb/knock
+* https://crt.sh/
+* https://shodan.io/
+* https://censys.io/ipv4/
+* https://securitytrails.com/
+* https://github.com/OWASP/Amass
+* https://www.crunchbase.com/search/acquisitions **<------ Discovering searching by acquisitions **
+
+#### Subdomain takeover
+
+* https://github.com/EdOverflow/can-i-take-over-xyz
+* https://github.com/projectdiscovery/nuclei
+
+#### Discovering of Target by using ASN (IP Blocks) and reverse whois
+
+* https://bgp.he.net/
+* https://apps.db.ripe.net/db-web-ui/#/fulltextsearch
+* https://whois.arin.net/ui/query.do
+* https://whoxy.com/
+* https://github.com/vysecurity/DomLink
+
+#### Screenshotting
+
+* https://github.com/michenriksen/aquatone
+* https://github.com/FortyNorthSecurity/EyeWitness
+* https://github.com/breenmachine/httpscreenshot
+* https://github.com/maaaaz/webscreenshot
+
+#### Red Team
 
 * https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki
 * https://www.ired.team/

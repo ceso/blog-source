@@ -19,7 +19,7 @@
   {{- end }}
 
   <div class="posts">
-    {{ range first 10 $paginator.Pages }}
+    {{ range first 11 $paginator.Pages }}
     <div class="post on-list">
       <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
       <div class="post-meta">
