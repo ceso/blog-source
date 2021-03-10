@@ -134,9 +134,9 @@ expiryDate = ["expiryDate"]
     name = "Cheatsheet"
     url = "posts/2020/04/hacking/oscp-cheatsheet/"
   [[menu.main]]
-    identifier = "presentations/streamings"
-    name = "Presentations/Streamings"
-    url = "posts/2021/03/presentations-and-streamings/"
+    identifier = "videos"
+    name = "Videos"
+    url = "posts/2021/03/my-videos/"
   [[menu.main]]
     identifier = "about"
     name       = "About"
