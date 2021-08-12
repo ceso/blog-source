@@ -47,6 +47,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
 * https://www.win.tue.nl/~aeb/linux/hh/hh-8.html
 * http://www.dankalia.com/tutor/01005/0100501004.htm
+* https://blog.ikuamike.io/posts/2021/package_managers_privesc/
 
 #### Windows Privilege Escalation
 
@@ -73,12 +74,6 @@ This isn't more than another hacking resources list. I basically throw here ever
 
 * https://vipulvyas0813.medium.com/introduction-to-powershell-for-penetration-testing-733236bc9547 **<------ Serie about Poershell for Penetration Testing (5 posts)**
 
-#### Exploit Development/Reversing
-
-* https://www.shogunlab.com/blog/2017/08/11/zdzg-windows-exploit-0.html
-* https://n4r1b.netlify.app/posts/2020/01/dissecting-the-windows-defender-driver-wdfilter-part-1/
-* https://www.forrest-orr.net/post/malicious-memory-artifacts-part-i-dll-hollowing
-
 #### Linux stuff
 
 * http://www.pathname.com/fhs/pub/fhs-2.3.html
@@ -98,6 +93,25 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://github.com/danielmiessler/SecLists
 * https://github.com/rapid7/ssh-badkeys
 * https://crackstation.net/
+
+#### Exploit Development/Reversing
+
+* https://blog.sevagas.com/IMG/pdf/BypassAVDynamics.pdf
+* https://github.com/m0n0ph1/Process-Hollowing
+* https://www.virusbulletin.com/virusbulletin/2011/10/okay-so-you-are-win32-emulator
+* https://www.usenix.org/system/files/conference/woot16/woot16-paper-blackthorne_update.pdf
+* https://blog.sannemaasakkers.com/2021/08/07/adversary-phishing-characteristics/
+* https://s3cur3th1ssh1t.github.io/A-tale-of-EDR-bypass-methods/
+* https://github.com/BC-SECURITY/Beginners-Guide-to-Obfuscation
+* https://www.shogunlab.com/blog/2017/08/11/zdzg-windows-exploit-0.html
+* https://n4r1b.netlify.app/posts/2020/01/dissecting-the-windows-defender-driver-wdfilter-part-1/
+* https://www.forrest-orr.net/post/malicious-memory-artifacts-part-i-dll-hollowing
+* https://pinvoke.net/
+* https://antiscan.me/
+* https://github.com/stephenfewer/ReflectiveDLLInjection --> ReflectiveDLLInjection en Powershell!!!!
+* https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-ReflectivePEInjection.ps1 --> Invoke-ReflectivePEInjection Powershell
+* https://blogs.msdn.microsoft.com/joelpob/2004/02/15/creating-delegate-types-via-reflection-emit/
+* https://web.archive.org/web/20120520182849/http://www.exploit-monday.com/2012_05_13_archive.html 
 
 #### Compiling exploits
 
@@ -206,9 +220,11 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://malicious.link/post/2016/kerberoast-pt1/ **<------ Serie about Kerberoasting (5 posts)**
 * https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
 
+#### Antivirus/EDR Evasion
 
 #### Cool presentations/videos
 
+* Defeating EDRs using Dynamic Invocation - Jean Francois Maes https://youtu.be/LXfhyTpQ7TM
 * A New Era Of SSRF: Exploiting Url Parsrs - Orange Tsai https://www.youtube.com/watch?v=D1S-G8rJrEk
 * HTTP Desync Attacks: Smashing into the Cell Next Door - albinowax https://www.youtube.com/watch?v=w-eJM2Pc0KI&t=1622s
 * A $7.500 BUG BOUNTY Bug Explained, step by step. (Blind XXE OOB over DNS) - STOK https://www.youtube.com/watch?v=aSiIHKeN3ys&t=26s&pbjreload=101
