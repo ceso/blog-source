@@ -1,7 +1,10 @@
 +++
 date = "2020-04-07T02:30:30Z"
 tags = ["blog", "cheatsheet", "hacking", "linux", "windows", "exfiltration", "privilegeescalation"]
-title = "Hacking/OSCP cheatsheet"
+title = "Hacking Cheatsheet"
+aliases = [
+  "/hacking/oscp-cheatsheet/"
+]
 images = ["https://ceso.github.io/images/cheatsheet/banner.jpg"]
 description = "My humble cheatsheet of most used tools, webs, etc"
 toc = true
