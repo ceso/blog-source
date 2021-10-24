@@ -38,6 +38,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://github.com/OWASP/NodeGoat
 * https://owasp.org/www-project-juice-shop/
 * https://portswigger.net/web-security
+* https://github.com/bee-san/pyWhat
 
 #### Linux Privilege Escalation
 
@@ -94,9 +95,18 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://github.com/rapid7/ssh-badkeys
 * https://crackstation.net/
 
+#### Red Team
+
+* https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki
+* https://www.ired.team/
+* https://www.harmj0y.net/blog/ **<------ Awesome Active Directory Posts **
+* https://malicious.link/post/2016/kerberoast-pt1/ **<------ Serie about Kerberoasting (5 posts)**
+* https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
+
 #### Exploit Development/Reversing
 
 * https://blog.sevagas.com/IMG/pdf/BypassAVDynamics.pdf
+* https://epi052.gitlab.io/notes-to-self/blog/2021-06-16-windows-usermode-exploit-development-review/
 * https://github.com/m0n0ph1/Process-Hollowing
 * https://www.virusbulletin.com/virusbulletin/2011/10/okay-so-you-are-win32-emulator
 * https://www.usenix.org/system/files/conference/woot16/woot16-paper-blackthorne_update.pdf
@@ -142,7 +152,9 @@ This isn't more than another hacking resources list. I basically throw here ever
 #### General Hacking Cheatsheets/Cool Articles/Podcasts
 
 * https://github.com/tagnullde/OSCP/blob/master/oscp-cheatsheet.md
+* https://redtm.com/docs/web-pentest/2021-01-12-web-penetration-testing-task-check-list/
 * https://github.com/Optixal/OSCP-PWK-Notes-Public/
+* https://epi052.gitlab.io/notes-to-self/blog/2021-06-16-windows-usermode-exploit-development-review/
 * https://github.com/OlivierLaflamme/Cheatsheet-God/
 * https://github.com/sinfulz/JustTryHarder/
 * https://github.com/0x4D31/awesome-oscp
@@ -212,16 +224,6 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://github.com/breenmachine/httpscreenshot
 * https://github.com/maaaaz/webscreenshot
 
-#### Red Team
-
-* https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki
-* https://www.ired.team/
-* https://www.harmj0y.net/blog/ **<------ Awesome Active Directory Posts **
-* https://malicious.link/post/2016/kerberoast-pt1/ **<------ Serie about Kerberoasting (5 posts)**
-* https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
-
-#### Antivirus/EDR Evasion
-
 #### Cool presentations/videos
 
 * Defeating EDRs using Dynamic Invocation - Jean Francois Maes https://youtu.be/LXfhyTpQ7TM
@@ -241,7 +243,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://www.amazon.com/Real-World-Bug-Hunting-Field-Hacking/dp/1593278616/
 * https://www.amazon.com/How-Linux-Works-2nd-Superuser/dp/1593275676/
 
-#### Hackers to follow on twitter (it's a really awesome way to learn as well!. Will keep adding them)
+#### Infosec twitter accounts to follow (it's a really awesome way to learn as well!. Will keep adding them)
 
 * securibee: https://twitter.com/securibee
 * codingo_: https://twitter.com/codingo_
@@ -265,3 +267,10 @@ This isn't more than another hacking resources list. I basically throw here ever
 * Rasta Mouse: https://twitter.com/_RastaMouse
 * ippsec: https://twitter.com/ippsec
 * Chema Alonso: https://twitter.com/chemaalonso
+* FalconSpy: https://twitter.com/0xFalconSpy 
+* Minh: https://twitter.com/WhiteHoodHacker
+* 0verfl0w: https://twitter.com/0verfl0w_
+* Markus Höfer: https://twitter.com/HashtagMarkus
+* Jonas L: https://twitter.com/jonasLyk
+* Will Dormann: https://twitter.com/wdormann
+* Scott Piper: https://twitter.com/0xdabbad00
