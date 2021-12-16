@@ -98,6 +98,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 #### Red Team
 
 * https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki
+* https://pentestbook.six2dez.com/post-exploitation/windows/ad/kerberos-attacks
 * https://www.ired.team/
 * https://www.harmj0y.net/blog/ **<------ Awesome Active Directory Posts **
 * https://malicious.link/post/2016/kerberoast-pt1/ **<------ Serie about Kerberoasting (5 posts)**
@@ -159,6 +160,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 #### General Hacking Cheatsheets/Cool Articles/Podcasts
 
 * https://github.com/tagnullde/OSCP/blob/master/oscp-cheatsheet.md
+* https://thedarksource.com/msfvenom-cheat-sheet-create-metasploit-payloads
 * https://redtm.com/docs/web-pentest/2021-01-12-web-penetration-testing-task-check-list/
 * https://github.com/Optixal/OSCP-PWK-Notes-Public/
 * https://epi052.gitlab.io/notes-to-self/blog/2021-06-16-windows-usermode-exploit-development-review/
