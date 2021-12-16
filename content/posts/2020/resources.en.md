@@ -102,6 +102,8 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://www.harmj0y.net/blog/ **<------ Awesome Active Directory Posts **
 * https://malicious.link/post/2016/kerberoast-pt1/ **<------ Serie about Kerberoasting (5 posts)**
 * https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
+* https://www.guidepointsecurity.com/blog/delegating-like-a-boss-abusing-kerberos-delegation-in-active-directory/ **<-- Abuse Constrained Delegation**
+* https://twitter.com/cube0x0/status/1468860246307258370?s=21
 
 #### Exploit Development/Reversing
 
@@ -112,14 +114,19 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://www.usenix.org/system/files/conference/woot16/woot16-paper-blackthorne_update.pdf
 * https://blog.sannemaasakkers.com/2021/08/07/adversary-phishing-characteristics/
 * https://s3cur3th1ssh1t.github.io/A-tale-of-EDR-bypass-methods/
+* https://roberreigada.github.io/posts/playing_with_an_edr/
+* https://github.com/jthuraisamy/SysWhispers
+* https://raw.githubusercontent.com/Mr-Un1k0d3r/EDRs/main/cortex.txt **<----- NON documented API's, possible AV/EDR Bypass?**
+* https://0xpat.github.io/Malware_development_part_1/ **<---- Malware Devlopment series**
 * https://github.com/BC-SECURITY/Beginners-Guide-to-Obfuscation
 * https://www.shogunlab.com/blog/2017/08/11/zdzg-windows-exploit-0.html
 * https://n4r1b.netlify.app/posts/2020/01/dissecting-the-windows-defender-driver-wdfilter-part-1/
 * https://www.forrest-orr.net/post/malicious-memory-artifacts-part-i-dll-hollowing
-* https://pinvoke.net/
+* https://www.ired.team/offensive-security/code-injection-process-injection/apc-queue-code-injection **<--- APC Bypass**
+* https://pinvoke.net/ **<------ Documented APIs for Bypass**
 * https://antiscan.me/
-* https://github.com/stephenfewer/ReflectiveDLLInjection --> ReflectiveDLLInjection en Powershell!!!!
-* https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-ReflectivePEInjection.ps1 --> Invoke-ReflectivePEInjection Powershell
+* https://github.com/stephenfewer/ReflectiveDLLInjection **--> ReflectiveDLLInjection en Powershell!!!!**
+* https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-ReflectivePEInjection.ps1 **--> Invoke-ReflectivePEInjection Powershell**
 * https://blogs.msdn.microsoft.com/joelpob/2004/02/15/creating-delegate-types-via-reflection-emit/
 * https://web.archive.org/web/20120520182849/http://www.exploit-monday.com/2012_05_13_archive.html 
 
