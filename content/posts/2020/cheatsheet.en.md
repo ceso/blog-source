@@ -955,6 +955,51 @@ So...actual list of badchars:
 msfvenom -p windows/exec -b '\x00\x0A' -f python --var-name buffer CMD=calc.exe EXITFUNC=thread
 ```
 
+## Antivirus Bypass
+
+Antivirus tend to flag malware by Signature/Heuristics detection, we could bypass these throughout certain techniques
+For more details, look up into the [Exploit Development/Reversing/AV|EDR Bypass](https://ceso.github.io/2020/12/hacking-resources/#exploit-developmentreversingAV|EDR Bypass) Section on the resources part of my blog.
+
+### Signature Bypass
+
+For example, we can obfuscate the code ciphering and/or encoding (having a decipher/decoding routine in the code), as also leverage tools dedicated for this purpose.
+Another thing is to use NOT common name for functions, variable names, etc; lunfardos, slang, idioisms, weird words from the dictionary, etc.
+
+### Heuristics Bypass
+
+As for the heuristics for example AV's tend to execute the malware inside a sandbox, we could have code for detecting if running inside a sandbox and exit if this is true.
+I could use the following techniques:
+
+* Sleep command and comparision of how real time has passed (AV's could NOT wait until the sleep and just fast-forward the time)
+* A counter up to 1 billon (Same story than Sleep, could not wait until it finishes and just exits)
+* Call Windows API's poor or not even documented (as AV's tend to emulate API's inside the sandboxes, but some of them will not, then at the malware trying to call it and not existing, it will be detected is running inside a Sandbox)
+* Verifying the name of the malware (AV's could rename the file, if it has changed it might be running inside a sandbox)
+* Veifying if I can allocate TOO MUCH memory
+* Checking if a known user in the system exists, if it doesn't exit
+
+### If NOT AV Bypass and Admin, DISABLE Defender
+
+If we have admin creds, we could disable Win Defender, please note THIS IS NEVER a good idea in production environments as this can be monitored!!
+
+```console
+# Query if there is already an excluded path
+  Get-MpPreference | select-object -ExpandProperty ExclusionPath
+# Disable real time monitoring
+  Set-MpPreference -DisableRealtimeMonitoring $true
+# Exclude temp dir from monitoring by defender
+  Add-MpPreference -ExclusionPath "C:\windows\temp"
+# Disable Defender ONLY for downloaded files
+  Set-MpPreference -DisableIOAVProtection $true
+# Or REMOVE ALL Signature's but leave it enabled
+  "C:\Program Files\Windows Defender\MpCmdRun.exe" -RemoveDefinitions -All
+```
+
+### AMSI Bypass
+
+AMSI (Anti-Malware Scan Interface), in short sit's between Powershell and Defender, so even if our crafted malware/tools have an AV Bypass, it still can be flagged by AMSI (annoying!), AMSI can also be leveraged for example for EDR's. There are certain ways to bypass AMSI, for example forcing it to fail.
+
+IT'S RECOMMENDED TO ALWAYS HAVE AN AMSI BYPASS BEFORE EXECUTING POWERSHELL PAYLOAD!
+
 ## Active Directory
 
 ### Permissions: ACE (Access Control Enties) SDDL (Security Descriptor Definition Language) - Format
