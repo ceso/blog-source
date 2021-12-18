@@ -70,6 +70,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://gracefulsecurity.com/path-traversal-cheat-sheet-windows/
 * https://bernardodamele.blogspot.com/2011/12/dump-windows-password-hashes.html
 * https://malicious.link/post/2016/kerberoast-pt1/
+* https://gist.github.com/pwntester/72f76441901c91b25ee7922df5a8a9e4 **<--- DotNetNuke (CVE-2017-9822) Payloads**
 
 #### Powershell
 
@@ -107,8 +108,10 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://www.guidepointsecurity.com/blog/delegating-like-a-boss-abusing-kerberos-delegation-in-active-directory/ **<-- Abuse Constrained Delegation**
 * https://twitter.com/cube0x0/status/1468860246307258370?s=21
 
-#### Exploit Development/Reversing
+#### Exploit Development/Reversing/AV|EDR Bypass
 
+* https://github.com/S3cur3Th1sSh1t/Amsi-Bypass-Powershell
+* https://amsi.fail/ **<---- Automatic generation of some AMSI Bypass**
 * https://blog.sevagas.com/IMG/pdf/BypassAVDynamics.pdf
 * https://epi052.gitlab.io/notes-to-self/blog/2021-06-16-windows-usermode-exploit-development-review/
 * https://github.com/m0n0ph1/Process-Hollowing
@@ -160,6 +163,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 
 #### General Hacking Cheatsheets/Cool Articles/Podcasts
 
+* https://github.com/chvancooten/OSEP-Code-Snippets **<---- OSEP Code Snippets!**
 * https://github.com/tagnullde/OSCP/blob/master/oscp-cheatsheet.md
 * https://thedarksource.com/msfvenom-cheat-sheet-create-metasploit-payloads
 * https://redtm.com/docs/web-pentest/2021-01-12-web-penetration-testing-task-check-list/
