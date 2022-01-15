@@ -98,6 +98,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 
 #### Red Team
 
+* https://3xpl01tc0d3r.blogspot.com/2021/07/resource-based-constrained-delegation.html?m=1 **<-- Resource Based Constrained Delegation IN LINUX**
 * https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference/
 * https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki
 * https://pentestbook.six2dez.com/post-exploitation/windows/ad/kerberos-attacks

