@@ -172,7 +172,7 @@ icacls.exe C:\Windows\Tasks
 
 ### Samba
 
-#### smbclient 
+#### smbclient
 
 Check if there is anonymous login enabled:
 
@@ -396,7 +396,7 @@ xfreerdp en Linux soporta restricted admin mode, se ejecuta asi por ej: `xfreerd
 
 ```console
 Enable it :
-  Through registry: 
+  Through registry:
     HKLM:\System\CurrentControlSet\Control\Lsa
     Use "DisableRestrictedAdmin" property
   With Powershell:

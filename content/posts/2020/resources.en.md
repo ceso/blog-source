@@ -109,11 +109,14 @@ This isn't more than another hacking resources list. I basically throw here ever
 * https://www.guidepointsecurity.com/blog/delegating-like-a-boss-abusing-kerberos-delegation-in-active-directory/ **<-- Abuse Constrained Delegation**
 * https://twitter.com/cube0x0/status/1468860246307258370?s=21
 
-#### Exploit Development/Reversing/AV|EDR Bypass
+#### Exploit Development/Reversing/AV|EDR Bypass/Malware Analysis
 
 * https://github.com/S3cur3Th1sSh1t/Amsi-Bypass-Powershell
 * https://amsi.fail/ **<---- Automatic generation of some AMSI Bypass**
 * https://blog.sevagas.com/IMG/pdf/BypassAVDynamics.pdf
+* https://ppn.snovvcrash.rocks/red-team/malware-development/code-injection/shellcode-runners
+* https://samsclass.info/126/126_F21.shtml **<--- Practical Malware Analysis Course!**
+* https://www.ringzerolabs.com/2019/08/fast-and-free-malware-analysis-lab-setup.html
 * https://epi052.gitlab.io/notes-to-self/blog/2021-06-16-windows-usermode-exploit-development-review/
 * https://github.com/m0n0ph1/Process-Hollowing
 * https://www.virusbulletin.com/virusbulletin/2011/10/okay-so-you-are-win32-emulator
@@ -251,6 +254,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 * The Bug Hunter's Methodology v4.0 - Recon Edition by @jhaddix​ at #NahamCon2020​ https://youtu.be/p4JgIu1mceI
 * How i became a HackerOne MVH without writing a single line of python (Motivational talk) by STOK https://youtu.be/4YjCta2fcbw
 * My Journey to Cybersecurity CIA Keynote - Heath Adams (aka The Cyber Mentor) https://www.youtube.com/watch?v=q4h8A5dQsZw
+* Defeating EDR's using D/Invoke - Jean-François Maes - https://youtu.be/d_Z_WV9fp9Q
 
 #### Cool Books
 
@@ -282,7 +286,7 @@ This isn't more than another hacking resources list. I basically throw here ever
 * Rasta Mouse: https://twitter.com/_RastaMouse
 * ippsec: https://twitter.com/ippsec
 * Chema Alonso: https://twitter.com/chemaalonso
-* FalconSpy: https://twitter.com/0xFalconSpy 
+* FalconSpy: https://twitter.com/0xFalconSpy
 * Minh: https://twitter.com/WhiteHoodHacker
 * 0verfl0w: https://twitter.com/0verfl0w_
 * Markus Höfer: https://twitter.com/HashtagMarkus
