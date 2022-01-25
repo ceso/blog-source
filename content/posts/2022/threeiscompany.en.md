@@ -2,7 +2,7 @@
 date = "2022-01-25"
 tags = ["blog", "osep", "hacking", "thoughts", "infosec", "tryharder"]
 title = "Three is Company: My adventure getting OSEP towards landing OSCE3 "
-description = "OSEP"
+description = "A little storytelling about my adventures into getting OSEP"
 images = ["https://ceso.github.io/images/blog/osep/"]
 toc = true
 +++
