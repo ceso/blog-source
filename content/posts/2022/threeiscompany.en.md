@@ -58,7 +58,7 @@ First of all, I booked 2 days off from work, this way I knew before hand I was g
 
 Then, saturday 18 of Dec. 2021 at 17 hs GMT-3 marked the start of my first attempt and it ended the 21 at 17 hs GMT-3 (the 20 the time to break and 21 for the report), this...didn't go quite well.
 
-Compared to OSCP which I had a simulation of the exam, with OSEP I didn't...and how the exam was structured, what kind of things to epexct, how it was gonna work (besides what's in the guide of the exam), hit me hard, it wrecked me.
+Compared to OSCP which I had a simulation of the exam, with OSEP I didn't...and how the exam was structured, what kind of things to expect, how it was gonna work (besides what's in the guide of the exam), hit me hard, it wrecked me.
 
 It took me around 15 - 30 minutes to find the first foothold, and about 1 - 2 hours being able to exploit it, after I was able to do it, I got the first flag, first 10 points!
 Around 30 minutes later I figured it out how to do LPE, here is where stuff start started to go downhill...it was extremly stresfull how inconsistent the environment was, between reverts my initial foothold sometimes worked and sometimes not, I ended up using around 15 reverts if I remember correctly, which each one of them took a lot, nothing really wrong with this, it's understandable is a large environment so is just natural is gonna take a lot, but if you start adding up the time spent on reverts which is the same as being able to not do anything and how many I needed to use, damn...it's a lot of time wasted.
@@ -125,6 +125,16 @@ https://zim-wiki.org/manual/Plugins/Table_Editor.html
 
 If you are as me extremely tired of heavy ugly javascript text editors, then give a try also to Zim, I don't see myself ditching.
 
+Shard the note taking template, plugins and so I use, how did I use them?
+The way I took notes was by making a copy of the "machine_template" directory as per IP, for example if there were the machine 192.168.42.42 and the 192.168.42.43 I will do:
+
+```console
+for i in 2 3; do cp -r machine_template "192.168.42.4${i}"; done
+```
+
+And afterwards updated the index, then there will be the same structure of notes for both, the .42 and the .43.
+In the file "1-Exam_Objective.txt" I copy pasted what were the exam objectives, as the information given. On the file "2-AD_Enum-general.txt" I wrote down anything about AD recon which was transversal to everything, for example Bloodhound screenshots of paths of attack, juicy information, etc. "3-PathChain_of_Attack.txt" is a file I went to write every once and then, there I basically started to write down the flow of the attack in a really high level, for example "192.168.42.42 (example.com) compromised with attack X and user obtained foo -> LPE on 192.168.42.42 (example.com) by abusing unquoted service path -> compromise on 192.168.42.43 from example.com via SprintPooler attack, NO LPE as received user was already a high priv one -> Dumped hashes on 192.168.42.43 used brute force script and obtained low priv access into 192.168.42.50... and so on, this way I had a really quick reference for writing the report as per exploiting everything again if needed, in that file as well I kept a table showing in a high level which level of compromise I got there and the correspondance between IP-Hostname. In "4-HashesPasswords.txt" is self-explanatory there I saved the output from hashdumps, dumps from mimikatz, passwords cracked, etc. "5-Flags.txt" I used it for save there as summary the flags of every machine just the hostname followed by the flags and which file was it. And finally the "0-REVISAR-PRE-TERMINAR.txt" was a dummy file I used for writing down stuff to take a look after it again before the exam time run out.
+Regardless the rest of the structure, is pretty self-explanatory, for example in "enumeration/nmap.txt" I copy pasted it output from nmap, and so on.
 #### 01: The Report
 
 I had until the 21 of Jan. circa at 16:45 GMT-3 to send my report, I sent it at 16:15 GMT-3 (some minutes more/some minutes less), and this was extremely tiring to write it as well, I run into some issue with LaTeX, for example, shellcode went outside of the margens and it broke either the format or the generation as it were long lines, I just ended up putting a new line, claryfing this issue and a screenshot of the correct code of the ones I inserted a new line for not getting the format/generation broken.
