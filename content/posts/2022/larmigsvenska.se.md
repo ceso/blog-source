@@ -3,9 +3,10 @@ date = "2022-04-09"
 tags = ["blog", "language", "swedish", "learning", "tryharder"]
 title = "Hur jag är lär mig svenska"
 description = "Ett kort berättelse om hur jag lär mig svenska"
-images = ["https://ceso.github.io/images/blog/general/larsvenska.png"]
 toc = true
 +++
+
+{{< image src="/images/blog/general/larsvenska.png" position="center" style="border-radius: 8px;" >}}
 
 Förneka: Deta blogginlägget har mycket fel, jag vet det, men...jag vill bara skriva lite om hur jag lär mig svenska, så det är en lite öva för mig, ingenting allvarlig!
 
@@ -25,7 +26,7 @@ Tja, det är lite hur jag är lär mig, det är inte galna och jag är inte väl
 
 En sak jag tycker är verkligen bra är jag är inte rädd att göra fel, heller ingen är jag skäms för de. Jag tycker jag kan lär mer om jag göra fel än utan dem.
 
-Forlåt om detta blogginlägget gjörde fnös eller reta dig, men som säger jag...förmodligen jag ska lär mer göra fel (också detta är min blogginläget haha).
+Förlåt om detta blogginlägget gjörde fnös eller reta dig, men som säger jag...förmodligen jag ska lär mer göra fel (också detta är min blogginläget haha).
 
 Nästa...några webblänkar till "resources" använda jag :D
 
