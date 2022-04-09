@@ -82,9 +82,7 @@ As in the previous attempt in 15-30 minutes, foothold identified, 30 minutes mor
 
 Secured 110 points, I started to look at the exam in a relaxed manner, did recon here and there, identified highly likely possible next vectors and different paths into the objective, though after a couple of hours I wasn't able to exploit this vectors as I was unable to figure out how to exploit their respective footholds, then I just decided to go throughout my notes, revist them, re-exploit pwned stuff, verify my screenshots and take new ones if needed, and repeat this excersise a couple times more, if there was something I didn't want to go through was getting enough points but failing due a screwed report...being already too late and in a safe zone, I went to sleep a few hours, came back and again back to doing recon trying to identify how to exploit those identified paths, which I couldn't success on this, but I was 100% sure those were the paths, then finally reached the hour limit, the proctor announced the time ended and my VPN connection was terminated and was told how to proced from here.
 
-```console
-PRINTED CERTIFICATE WILL BE HERE
-```
+{{< image src="/images/blog/osep/certificate.jpeg" position="center" style="border-radius: 8px;" >}}
 
 ## 101: Documentation
 
