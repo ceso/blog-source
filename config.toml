@@ -124,6 +124,10 @@ expiryDate = ["expiryDate"]
     title  = "Las Aventuras de Ceso"
     weight    = 2
 
+  [languages.se]
+    title  = "Ceso Äventyr"
+    weight    = 3
+
 [menu]
   [[menu.main]]
     identifier = "resources"

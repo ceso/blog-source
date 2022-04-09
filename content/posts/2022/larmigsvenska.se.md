@@ -3,8 +3,8 @@ date = "2022-04-09"
 tags = ["blog", "language", "swedish", "learning", "tryharder"]
 title = "Hur jag är lär mig svenska"
 description = "Ett kort berättelse om hur jag lär mig svenska"
-images = ["https://ceso.github.io/images/blog/geeral/larsvenska.png"]
-toc = false
+images = ["https://ceso.github.io/images/blog/general/larsvenska.png"]
+toc = true
 +++
 
 Förneka: Deta blogginlägget har mycket fel, jag vet det, men...jag vill bara skriva lite om hur jag lär mig svenska, så det är en lite öva för mig, ingenting allvarlig!
