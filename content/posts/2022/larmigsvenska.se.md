@@ -3,6 +3,7 @@ date = "2022-04-09"
 tags = ["blog", "language", "swedish", "learning", "tryharder"]
 title = "Hur jag är lär mig svenska"
 description = "Ett kort berättelse om hur jag lär mig svenska"
+images = ["https://ceso.github.io/images/blog/general/larsvenska.png"]
 toc = true
 +++
 
