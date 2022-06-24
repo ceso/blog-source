@@ -67,8 +67,9 @@ Confirmed the presence of Malware and with the machine now isolated, we proceed 
 
 So, we see that this malware what it does is to start deleting shadow copies, but what are shadow copies, well from wikipedia...
 
-```text
-Shadow Copy (also known as Volume Snapshot Service, Volume Shadow Copy Service or VSS) is a technology included in Microsoft Windows that can create backup copies or snapshots of computer files or volumes, even when they are in use.```
+```console
+Shadow Copy (also known as Volume Snapshot Service, Volume Shadow Copy Service or VSS) is a technology included in Microsoft Windows that can create backup copies or snapshots of computer files or volumes, even when they are in use.
+```
 
 So what it's doing is to delete volume snapshots (backups). Moving forward with the investigation we want to see if there's any activity on the logs, which isn't (the Network Connectivity also didn't have anything, but I don't feel like taking a screenshot again):
 
@@ -93,7 +94,7 @@ Knwon this, we can proceed to close the case:
 
 Didn't take screenshot of the process, but when closing the case, I used the following data:
 
-```
+```console
 Threat indicator: other
 Quarantained: I put it as yes, because I didn't take a look before, this answer was wrong, it wasn't quarantained hehe
 Malicious
