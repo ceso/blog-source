@@ -1,14 +1,15 @@
 +++
-date = "2022-06-11T00:00:00Z"
-tags = [""]
+date = "2022-06-24T02:43:00Z"
+tags = ["letsdefend", "malware-analysis", "blue-team", "ransomware", "ctf"]
 categories = ["Lets Defend"]
 title = "SOC145 - Ransomware Detected"
-images = [""]
+images = ["https://ceso.github.io/images/letsdefend/soc145/letsdefend-socialv2.png"]
 description = "My write-up/walkthrough for SOC-145 from Lets Defend."
 toc = true
 
 +++
-{{< image src="/images/" position="center" style="border-radius: 8px;" >}}
+
+{{< image src="/images/letsdefend/soc145/ransomware-card.png" position="center" style="border-radius: 8px;" >}}
 
 ## Quick Summary
 
