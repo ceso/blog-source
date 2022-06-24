@@ -1,6 +1,6 @@
 +++
 date = "2022-06-24T02:43:00Z"
-tags = ["letsdefend", "malware-analysis", "blue-team", "ransomware", "ctf"]
+tags = ["letsdefend", "soc", "blue-team", "ransomware", "ctf"]
 categories = ["Lets Defend"]
 title = "SOC145 - Ransomware Detected"
 images = ["https://ceso.github.io/images/letsdefend/soc145/letsdefend-socialv2.png"]
