@@ -17,9 +17,6 @@ buildFuture  = true
 buildExpored = false
 canonifyURLs = true
 
-[permalinks]
-  posts = "/posts/:year/:month/:title/"
-
 enableRobotsTXT = false
 enableGitInfo   = true
 enableEmoji     = false
@@ -29,11 +26,11 @@ disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
 
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
 [blackfriday]
   hrefTargetBlank = true
-
-[author]
-  name = "ceso"
 
 [taxonomies]
   tag      = "tags"
@@ -71,6 +68,9 @@ disableHugoGeneratorInject = false
   # Default theme "light" or "dark"
   defaultTheme = "dark"
   themeColor = "#252627"
+
+  [params.author]
+    name = "ceso"
 
   # Colors for favicons
   [params.favicon.color]
