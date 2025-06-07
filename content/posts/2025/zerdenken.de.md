@@ -9,7 +9,7 @@ toc = false
 
 {{< image src="/images/blog/general/zerdenken.png" position="center" style="border-radius: 10x;" >}}
 
-Als es April 2022, habe ich einen Post auf Schwedisch geschreiben, weil ich angefangen habe, Schwedisch zu lernen. Ich erinnere mich nicht, wann genau ich aufgehört habe, Schwedisch zu lernen.
+Als es April 2022 war, habe ich einen Post auf Schwedisch geschreiben, weil ich angefangen habe, Schwedisch zu lernen. Ich erinnere mich nicht, wann genau ich aufgehört habe, Schwedisch zu lernen.
 
 Im Februar 2023 bin ich nach Deutschland umgezogen. Als ich umgezogen bin, habe ich anfangen, um Deutsch zu lernen. Jetzt lerne ich seit ungefähr zwei Jahren Deutsch.
 
