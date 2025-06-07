@@ -10,16 +10,20 @@ toc = false
 {{< image src="/images/blog/general/zerdenken.png" position="center" style="border-radius: 10x;" >}}
 
 Als es April 2022, habe ich einen Post auf Schwedisch geschreiben, weil ich angefangen habe, Schwedisch zu lernen. Ich erinnere mich nicht, wann genau ich aufgehört habe, Schwedisch zu lernen.
+
 Im Februar 2023 bin ich nach Deutschland umgezogen. Als ich umgezogen bin, habe ich anfangen, um Deutsch zu lernen. Jetzt lerne ich seit ungefähr zwei Jahren Deutsch.
 
 Es ist ein bisschen komisch, aber ich habe das Gefühl, dass ich etwas auf Deutsch ausdrucken kann, was ich in meiner Muttersprache (Spanisch) nicht konnte - sogar wenn ich viele Fehler mache.
 
 Heute, als ich langewilig war, kam mir eine Idee: Sollte ich etwas auf Deutsch schreiben? Und ich habe mir selbst antworte - JA, warum nicht?
-Deswegen, ich habe entscheidet, einige der Texte, die ich heute geschreibt habe, in diesen kurzen Post zu veröffentlichen.
-Bitte, wenn du es liest, hab Gnade mir mir. Vergessen dich nicht, ich habe bloß seit 2 Jahre Deutsch angefangen zu lernen und selbsverständlich, wie bei alles bei mir - ich bin Autodidakt.
-Dieser Post ist besonders für mich. Es ist etwas, das ich später in der Zukunft wieder lesen kann und dann begriffe, wie viel mein Deutsch verbessert hat.
 
-Ich heiße diese Text: Zerdenken.
+Deswegen, ich habe entscheidet, einige der Texte, die ich heute geschreibt habe, in diesen kurzen Post zu veröffentlichen.
+
+Bitte, wenn du es liest, hab Gnade mir mir. Vergessen dich nicht, ich habe bloß seit 2 Jahre Deutsch angefangen zu lernen und selbsverständlich, wie bei alles bei mir - ich bin Autodidakt.
+
+Dieser Post ist besonders für mich. Es ist etwas, das ich später in der Zukunft wieder lesen kann und dann begriffe, wie viel mein Deutsch verbessert ist.
+
+Ich nenne diese Text: Zerdenken.
 
 # Zerdenken
 
