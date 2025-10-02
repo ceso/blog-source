@@ -1,15 +1,14 @@
-+++
-date = "2020-01-11T00:00:00Z"
-tags = ["linux", "htb-medium", "php", "rce", "git", "web", "ssh", "sudo"]
-categories = ["Hack the Box"]
-title = "Hack The Box - Bitlab"
-images = ["https://ceso.github.io/images/htb/bitlab/bitlab-header.jpg"]
-description = "My write-up / walkthrough for Bitlab from Hack The Box."
-toc = true
-aliases = [
-    "/hack-the-box/bitlab/"
-]
-+++
+---
+date: 2020-01-11
+tags: ["linux", "htb-medium", "php", "rce", "git", "web", "ssh", "sudo"]
+categories: ["Hack the Box"]
+title: "Hack The Box - Bitlab"
+images: ["https://ceso.github.io/images/htb/bitlab/bitlab-header.jpg"]
+description: "My write-up / walkthrough for Bitlab from Hack The Box."
+toc: true
+aliases: ["/hack-the-box/bitlab/"]
+---
+
 {{< image src="/images/htb/bitlab/info-card.png" position="center" style="border-radius: 8px;" >}}
 
 ## Quick Summary

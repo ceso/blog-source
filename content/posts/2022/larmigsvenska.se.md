@@ -1,11 +1,12 @@
-+++
-date = "2022-04-09"
-tags = ["blog", "language", "swedish", "learning", "tryharder"]
-title = "Hur jag är lär mig svenska"
-description = "Ett kort berättelse om hur jag lär mig svenska"
-images = ["https://ceso.github.io/images/blog/general/larsvenska.png"]
-toc = true
-+++
+---
+date: 2022-04-09
+tags: ["blog", "language", "swedish", "learning", "tryharder"]
+categories: ["blogging"]
+title: "Hur jag är lär mig svenska"
+description: "Ett kort berättelse om hur jag lär mig svenska"
+images: ["https://ceso.github.io/images/blog/general/larsvenska.png"]
+toc: true
+---
 
 {{< image src="/images/blog/general/larsvenska.png" position="center" style="border-radius: 8px;" >}}
 
@@ -31,210 +32,210 @@ Förlåt om detta blogginlägget gjörde fnös eller reta dig, men som säger ja
 
 Nästa...några webblänkar till "resources" använda jag :D
 
-# Youtube kanaler
+## Youtube kanaler
 
-## Svensk youtubers (eller bara lär det)
+### Svensk youtubers (eller bara lär det)
 
-### Say It In Swedish
+#### Say It In Swedish
 
 {{< youtube ijiaeuKnYRQ >}}
 
-### Fun Swedish
+#### Fun Swedish
 
 {{< youtube 6IIPA9JeIBo >}}
 
-### The Swedish Linguist
+#### The Swedish Linguist
 
 {{< youtube I4L8d_XAhIc >}}
 
-### Academia Cervena
+#### Academia Cervena
 
 {{< youtube lXp7_Sjgm34 >}}
 
-### TheSwedishLad
+#### TheSwedishLad
 
 {{< youtube 7CQX3Htj7jE >}}
 
-### Christopher O'Regan
+#### Christopher O'Regan
 
 {{< youtube 9ByJEuafSYc >}}
 
-### Uppdrag: Mat
+#### Uppdrag: Mat
 
 {{< youtube jelwGUv9i_U >}}
 
-### Markus Aujalay
+#### Markus Aujalay
 
 {{< youtube DYSC5HyoQ6c >}}
 
-### Leif Mannenrström
+#### Leif Mannenrström
 
 {{< youtube NpVFsgvUonY >}}
 
-### Days of French 'n' Swedish
+#### Days of French 'n' Swedish
 
 {{< youtube InqEZDCaLRs >}}
 
-## SVENSKA FÖR ALLA - a crash course in Swedish
+### SVENSKA FÖR ALLA - a crash course in Swedish
 
 {{< youtube aoEoUWrGxzQ >}}
 
-## Svensk youtube kanaler (till exempel: nyheter)
+### Svensk youtube kanaler (till exempel: nyheter)
 
-### SVT
+#### SVT
 
 {{< youtube FqOCM1iKN_k >}}
 
-### SVT Humor
+#### SVT Humor
 
 {{< youtube ol_5yMD4Ujw >}}
 
-### TV4
+#### TV4
 
 {{< youtube -Vqw_Iu_swo >}}
 
-## TV4 Nyheterna
+### TV4 Nyheterna
 
 {{< youtube N7WFU6tK37I >}}
 
-### Nyhetsmorgon
+#### Nyhetsmorgon
 
 {{< youtube 7yjua6aeIXo >}}
 
-### Aftonbladet
+#### Aftonbladet
 
 {{< youtube bswXXjOAEcY >}}
 
-### 8 SIDOR
+#### 8 SIDOR
 
 {{< youtube OSRi2ayQEQ4 >}}
 
-### Infinitum No
+#### Infinitum No
 
 {{< youtube hVKIarZjag4 >}}
 
-### Efter fem
+#### Efter fem
 
 {{< youtube Jo0YgLJ1OuI >}}
 
-### Nyheter24
+#### Nyheter24
 
 {{< youtube 7bOO16wmjJ4 >}}
 
-### FORMAT HISTORIA
+#### FORMAT HISTORIA
 
 {{< youtube _Z9z9UbXg6g >}}
 
-### Uppkåkra
+#### Uppkåkra
 
 {{< youtube oP24EeFQj3U >}}
 
-### Gamla Uppsala museum
+#### Gamla Uppsala museum
 
 {{< youtube HmK4dazSD3s >}}
 
-### Historiska museet vid Lunds universitet
+#### Historiska museet vid Lunds universitet
 
 {{< youtube 9zR0WNpbfDE >}}
 
-### Historiska museet
+#### Historiska museet
 
 {{< youtube -RmuD3oz5C4 >}}
 
-### UPPLANDMUSEET
+#### UPPLANDMUSEET
 
 {{< youtube WwZwQp74OJ8 >}}
 
-### Statens maritima och transporthistoriska museer
+#### Statens maritima och transporthistoriska museer
 
 {{< youtube ymoWu-K8jZg >}}
 
-### Nördarnas Jul
+#### Nördarnas Jul
 
 {{< youtube K5mwJHMsAXE >}}
 
-## Polyglott
+### Polyglott
 
-### Steve Kaufmann - lingosteve
+#### Steve Kaufmann - lingosteve
 
 {{< youtube PvT3c0ljWtw >}}
 
-### Olly Richards
+#### Olly Richards
 
 {{< youtube GhzwmN31AGo >}}
 
-### Wouter Cordwuener
+#### Wouter Cordwuener
 
 {{< youtube LmWYFhTdkRY >}}
 
 
-# Böcker
+## Böcker
 
-## Short Stories in Swedish for Beginners (Teach Yourself)
+### Short Stories in Swedish for Beginners (Teach Yourself)
 
 ```textinfo
 https://www.amazon.com/-/en/Olly-Richards/dp/1529302749/
 ```
 
-## Harry Potter och De Vises Sten
+### Harry Potter och De Vises Sten
 
 ```textinfo
 https://www.amazon.com/-/en/dp/B07N49321N/
 ```
 
-# Webs
+## Webs
 
-## Podcast
+### Podcast
 
-### SwedishPod101
+#### SwedishPod101
 
 ```textinfo
 https://www.swedishpod101.com/
 ```
 
-## Platforms
+### Platforms
 
-### Duolingo
+#### Duolingo
 
 ```textinfo
 https://duolingo.com/
 ```
 
-### Clozemaster
+#### Clozemaster
 
 ```textinfo
 https://www.clozemaster.com/
 ```
 
-# Ordböcker
+## Ordböcker
 
-## SVENSKA AKADEMIENS ORDBÖCKER
+### SVENSKA AKADEMIENS ORDBÖCKER
 
 ```textinfo
 https://svenska.se/
 ```
 
-## Folkets Lexikon
+### Folkets Lexikon
 
 ```textinfo
 https://folkets-lexikon.csc.kth.se/folkets/
 ```
 
-## Lexin
+### Lexin
 
 ```textinfo
 https://lexin.nada.kth.se/lexin/
 ```
 
-# Översätt
+## Översätt
 
-## Deepl
+### Deepl
 
 ```textinfo
 https://www.deepl.com/
 ```
 
-## Google Translate
+### Google Translate
 
 ```textinfo
 https://translate.google.com/

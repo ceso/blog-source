@@ -1,14 +1,13 @@
-+++
-date = "2020-05-14T00:00:00Z"
-tags = ["linux", "htb-medium", "rce", "python", "code-analysis", "web", "ssh"]
-title = "Hack The Box - Obscurity"
-images = ["https://ceso.github.io/images/htb/obscurity/obscurity-header.png"]
-description = "My write-up / walkthrough for Obscurity from Hack The Box."
-toc = true
-aliases = [
-    "/hack-the-box/obscurity/"
-]
-+++
+---
+date: 2020-05-14
+tags: ["linux", "htb-medium", "rce", "python", "code-analysis", "web", "ssh"]
+categories: ["Hack the Box"]
+title: "Hack The Box - Obscurity"
+images: ["https://ceso.github.io/images/htb/obscurity/obscurity-header.png"]
+description: "My write-up / walkthrough for Obscurity from Hack The Box."
+toc: true
+aliases: ["/hack-the-box/obscurity/"]
+---
 
 {{< image src="/images/htb/obscurity/info-card.png" position="center" style="border-radius: 8px;" >}}
 

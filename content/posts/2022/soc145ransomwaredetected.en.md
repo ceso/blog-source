@@ -1,13 +1,12 @@
-+++
-date = "2022-06-24T02:43:00Z"
-tags = ["letsdefend", "soc", "blue-team", "ransomware", "ctf"]
-categories = ["Lets Defend"]
-title = "SOC145 - Ransomware Detected"
-images = ["https://ceso.github.io/images/letsdefend/soc145/letsdefend-socialv2.png"]
-description = "My write-up/walkthrough for SOC-145 from Lets Defend."
-toc = true
-
-+++
+---
+date: 2022-06-24
+tags: ["letsdefend", "soc", "blue-team", "ransomware", "ctf"]
+categories: ["Lets Defend"]
+title: "SOC145 - Ransomware Detected"
+images: ["https://ceso.github.io/images/letsdefend/soc145/letsdefend-socialv2.png"]
+description: "My write-up/walkthrough for SOC-145 from Lets Defend."
+toc: true
+---
 
 {{< image src="/images/letsdefend/soc145/ransomware-card.png" position="center" style="border-radius: 8px;" >}}
 

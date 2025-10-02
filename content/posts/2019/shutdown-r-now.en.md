@@ -1,10 +1,11 @@
-+++
-tags = ["blog","thoughts"]
-date = "2019-12-22T00:00:00Z"
-title = "shutdown -r now"
-images = ["https://ceso.github.io/images/site/cuervos-cerro.jpg"]
-description = "Some end of year reflexions about where I'm and where I want to go in the future."
-+++
+---
+tags: ["blog","thoughts"]
+categories: ["blogging"]
+date: "2019-12-22"
+title: "shutdown -r now"
+images: ["https://ceso.github.io/images/site/cuervos-cerro.jpg"]
+description: "Some end of year reflexions about where I'm and where I want to go in the future."
+---
 
 Note: First than everything, sorry the english, is not my native language and always learning new stuff about it.
 
