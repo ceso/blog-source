@@ -1,11 +1,12 @@
-+++
-date = "2025-06-08"
-tags = ["blog", "language", "deutsch", "learning", "tryharder"]
-title = "Wehmütig"
-description = "Donner und Blitz"
-images = ["https://ceso.github.io/images/blog/general/wehmutig.png"]
-toc = false
-+++
+---
+date: 2025-06-08
+tags: ["blog", "language", "deutsch", "learning", "tryharder"]
+categories: ["writing"]
+title: "Wehmütig"
+description: "Donner und Blitz"
+images: ["https://ceso.github.io/images/blog/general/wehmutig.png"]
+toc: false
+---
 
 {{< image src="/images/blog/general/wehmutig.png" position="center" style="border-radius: 10x;" >}}
 

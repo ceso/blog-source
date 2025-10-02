@@ -1,14 +1,14 @@
-+++
-date = "2020-01-04T00:00:00Z"
-tags = ["linux", "htb-medium", "rce", "python", "code-analysis", "web", "ssh"]
-title = "Hack The Box - Craft"
-images = ["https://ceso.github.io/images/htb/craft/craft-header.jpg"]
-description = "My write-up / walkthrough for Craft from Hack The Box."
-toc = true
-aliases = [
-    "/hack-the-box/craft/"
-]
-+++
+---
+date: 2020-01-04
+tags: ["linux", "htb-medium", "rce", "python", "code-analysis", "web", "ssh"]
+categories: ["Hack the Box"]
+title: "Hack The Box - Craft"
+images: ["https://ceso.github.io/images/htb/craft/craft-header.jpg"]
+description: "My write-up / walkthrough for Craft from Hack The Box."
+toc: true
+aliases: ["/hack-the-box/craft/"]
+---
+
 {{< image src="/images/htb/craft/info-card.png" position="center" style="border-radius: 8px;" >}}
 
 ## Quick Summary

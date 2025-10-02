@@ -1,14 +1,14 @@
-+++
-date = "2020-02-07T00:00:00Z"
-tags = ["htb-medium", "linux", "sqli", "jwdp"]
-title = "Hack The Box - AI"
-images = ["https://ceso.github.io/images/htb/ai/ai-header.jpg"]
-description = "My write-up / walkthrough for AI from Hack The Box."
-toc = true
-aliases = [
-    "/hack-the-box/ai/"
-]
-+++
+---
+date: 2020-02-07
+tags: ["htb-medium", "linux", "sqli", "jwdp"]
+categories: ["Hack the Box"]
+title: "Hack The Box - AI"
+images: ["https://ceso.github.io/images/htb/ai/ai-header.jpg"]
+description: "My write-up / walkthrough for AI from Hack The Box."
+toc: true
+aliases: ["/hack-the-box/ai/"]
+---
+
 {{< image src="/images/htb/ai/info-card.png" position="center" style="border-radius: 8px;" >}}
 
 ## Quick Summary

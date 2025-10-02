@@ -1,11 +1,12 @@
-+++
-date = "2020-04-27"
-tags = ["blog", "oscp", "hacking", "thoughts"]
-title = "A Journey in the Dark - An adventure's tale towards OSCP"
-description = "A tale about my adventures into OSCP"
-images = ["https://ceso.github.io/images/blog/oscp/oscp_banner.png"]
-toc = true
-+++
+---
+date: 2020-04-27
+tags: ["blog", "oscp", "hacking", "thoughts"]
+categories: ["blogging"]
+title: "A Journey in the Dark - An adventure's tale towards OSCP"
+description: "A tale about my adventures into OSCP"
+images: ["https://ceso.github.io/images/blog/oscp/oscp_banner.png"]
+toc: true
+---
 
 {{< image src="/images/blog/oscp/oscp_banner.png" position="center" style="border-radius: 8px;" >}}
 
@@ -71,7 +72,7 @@ And the second, the proctored exam, I'm good at working under pressure (I worked
 To deal with those things, I thought about doing a Mock Exam (ONE week before the real one), what do I mean with a mock exam? Basically I was going to pick up 5 random machines from [HTB/Vulnhub OSCP-alike](https://docs.google.com/spreadsheets/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8/edit#gid=1839402159), and starting at a similar time as the one of my OSCP, hack them in a time frame of 23 hs 45 minutes, if I run out of time and I was not able to do it, then I was not able to do it, no way around it, on top of this to get used to the proctoring I was going to do a live stream on youtube for the whole time I needed to get the machines or until running out of time, whichever happend first.
 For the report itself, I gave me more freedom with it, the aim yes, was to do something similar to what I should submit to Offensive Security, but as this was a completely new thing, and more easy for me to fuck up, I thought of it more as a learning experience, so no, no deadlines to do it. I'm really grateful of doing it, because I ended indeed learning quite a lot about the process of what is worth to document, what is not, what I should I avoid, what notes _I MUST_ always have to write down, etc.
 
-#### 00 - The Live Streaming
+### 00 - The Live Streaming
 
 Days before the exam I asked to be chosen random machines from the list of alike-ones (link above in HTB/Vulnhub alike) and assign points to them, the list ended like this:
 
@@ -91,7 +92,7 @@ Finally, the 2020/04/11 I started doing a livestream on youtube, and ended rooti
 
 {{< youtube FwZc6JigIcE >}}
 
-#### 01 - Note Taking
+### 01 - Note Taking
 
 When I started my notes were pure shit, I'm sure they still are, but are way better than what they were before. For taking/keeping notes through all the PWK and OSCP, I used Cherrytree, I started with [this template](https://411hall.github.io/assets/files/CTF_template.ctb), but as I moved forward and my own methodology started to develop I modified some stuff, the result was having this template:
 
@@ -101,7 +102,7 @@ https://ceso.github.io/files/oscp/template_pwk.ctb
 
 **Note:** Something I didn't know during the exam, is that in the past some pepole has lost their notes of Cherrytree because the files got corrupted, then they were unable to  prepare their reports, my advice then is, maybe start with Cherrytree, and as time moves on, switch to some another tool for notetaking, such as [joplin](https://joplinapp.org/) or [Notion](https://notion.so/) to mention two examples, you will already have some methodology developed or starting to, so it will be easier to create a template adapted to yourself.
 
-#### 10 - The Report
+### 10 - The Report
 
 Now, for the report I decided to ditch the doc/.odf templates and just go with something I'm more comfortable: Markdown.
 For that I ended using the [template created by noraj](https://github.com/noraj/OSCP-Exam-Report-Template-Markdown), which using Eisvogel and LaTeX, the markdown is converted to .pdf.

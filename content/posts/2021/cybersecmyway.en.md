@@ -1,14 +1,13 @@
-+++
-tags = ["blog","thoughts","cybersecurity","learning"]
-date = "2021-02-14T16:00:00Z"
-title = "Q3liZXJzZWMgbXkgd2F 5IC0gUGFydCAxCg=="
-images = ["https://ceso.github.io/images/blog/cybersecmyway/banner.jpg"]
-toc = true
-aliases = [
-    "/posts/2021/02/q3lizxjzzwmgbxkgd2f5ic0gugfydcaxcg/"
-]
-description = "An insight about how I'm learning Cybersec"
-+++
+---
+tags: ["blog","thoughts","cybersecurity","learning"]
+categories: ["blogging"]
+date: 2021-02-14
+title: "Q3liZXJzZWMgbXkgd2F 5IC0gUGFydCAxCg=="
+images: ["https://ceso.github.io/images/blog/cybersecmyway/banner.jpg"]
+toc: true
+aliases: ["/posts/2021/02/q3lizxjzzwmgbxkgd2f5ic0gugfydcaxcg/"]
+description: "An insight about how I'm learning Cybersec"
+---
 
 ## Preface
 

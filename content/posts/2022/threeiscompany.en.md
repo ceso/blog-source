@@ -1,11 +1,12 @@
-+++
-date = "2022-01-25"
-tags = ["blog", "osep", "hacking", "thoughts", "infosec", "tryharder"]
-title = "Three is Company: My adventure getting OSEP towards landing OSCE3 "
-description = "A little storytelling about my adventures into getting OSEP"
-images = ["https://ceso.github.io/images/blog/osep/"]
-toc = true
-+++
+---
+date: 2022-01-25
+tags: ["blog", "osep", "hacking", "thoughts", "infosec", "tryharder"]
+categories: ["blogging"]
+title: "Three is Company: My adventure getting OSEP towards landing OSCE3 "
+description: "A little storytelling about my adventures into getting OSEP"
+images: ["https://ceso.github.io/images/blog/osep/"]
+toc: true
+---
 
 {{< image src="/images/blog/osep/osep_banner.png" position="center" style="border-radius: 8px;" >}}
 
@@ -86,7 +87,7 @@ Secured 110 points, I started to look at the exam in a relaxed manner, did recon
 
 ## 101: Documentation
 
-#### 00: Note Taking
+### 00: Note Taking
 
 On OSCP I did my note-taking leveraging Cherytree, it has had some complaints from people in the past as files got corrupt and all was lost. Even if there is 10 type of people: those who back up, and those who wish they did, I didn't want to put myself at that risk, so I started looking after some nice tools which allowed me to do note-taking in markdown, tried Obsidian, Triskel and Jopling, BUT none of these I liked them, nothing wrong with them but I can't deal with the fact of a text editor using Javascript, it ends up wasting a LOT of resources, and is just...a text editor, from my pov is nonsense so I kept moving, feeling unhappy as I couldn't find ANY text editor which made me feel ok and didn't consume an obscene amount of resources for such a simple task, at some point [fcr](https://fideo.info/) recommended me to try out Zim, and well, there wasn't a come back from it, I fall in love with this editor.
 
@@ -134,7 +135,7 @@ And afterward updated the index, then there will be the same structure of notes 
 In the file "1-Exam_Objective.txt" I copy-pasted what were the exam objectives, as the information is given. On the file "2-AD_Enum-general.txt" I wrote down anything about AD recon which was transversal to everything, for example Bloodhound screenshots of paths of attack, juicy information, etc. "3-PathChain_of_Attack.txt" is a file I went to write every once and then, there I basically started to write down the flow of the attack in a high level, for example "192.168.42.42 (example.com) compromised with attack X and user obtained foo -> LPE on 192.168.42.42 (example.com) by abusing unquoted service path -> compromise on 192.168.42.43 from example.com via SprintPooler attack, NO LPE as received user was already a high priv one -> Dumped hashes on 192.168.42.43 used brute force script and obtained low priv access into 192.168.42.50... and so on, this way I had a quick reference for writing the report as per exploiting everything again if needed, in that file as well I kept a table showing in a high level which level of compromise I got there and the correspondence between IP-Hostname. In "4-HashesPasswords.txt" is self-explanatory there I saved the output from hashdumps, dumps from mimikatz, passwords cracked, etc. "5-Flags.txt" I used it for saving there as a summary the flags of every machine just the hostname followed by the flags and which file was it. And finally, the "0-REVISAR-PRE-TERMINAR.txt" was a dummy file I used for writing down stuff to take a look after it again before the exam time run out.
 Regardless the rest of the structure, is pretty self-explanatory, for example in "enumeration/nmap.txt" I copy-pasted it's output from nmap, and so on.
 
-#### 01: The Report
+### 01: The Report
 
 I had until the 21 of Jan. circa at 16:45 GMT-3 to send my report, I sent it at 16:15 GMT-3 (some minutes more/some minutes less), and this was extremely tiring to write it as well, I run into some issue with LaTeX, for example, shellcode went outside of the margins and it broke either the format or the generation as it were long lines, I just ended up putting a new line, clarifying this issue and a screenshot of the correct code of the ones I inserted a new line for not getting the format/generation broken.
 

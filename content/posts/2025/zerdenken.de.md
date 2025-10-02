@@ -1,11 +1,12 @@
-+++
-date = "2025-06-07"
-tags = ["blog", "language", "deutsch", "learning", "tryharder"]
-title = "Zerdenken"
-description = "Eine kleine Meinung"
-images = ["https://ceso.github.io/images/blog/general/zerdenken.png"]
-toc = false
-+++
+---
+date: 2025-06-07
+tags: ["blog", "language", "deutsch", "learning", "tryharder"]
+categories: ["writing"]
+title: "Zerdenken"
+description: "Eine kleine Meinung"
+images: ["https://ceso.github.io/images/blog/general/zerdenken.png"]
+toc: false
+---
 
 {{< image src="/images/blog/general/zerdenken.png" position="center" style="border-radius: 10x;" >}}
 
