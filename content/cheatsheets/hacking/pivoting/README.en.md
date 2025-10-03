@@ -1,5 +1,6 @@
 ---
-title: "! Information"
+title: "README !"
+weight: 1
 date: 2025-10-03
 draft: false
 type: wiki
