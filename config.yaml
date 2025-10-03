@@ -1,0 +1,77 @@
+baseURL: https://onikenaz.ovh/
+languageCode: en-gb
+theme: smigle-lagom
+title: Ceso Adventures
+
+paginate: 10
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: whoami
+      name: Whoami
+      url: /whoami/
+      weight: 2
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 3
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 5
+    - identifier: resources
+      name: Resources
+      url: /resources
+    - identifier: cheatsheets
+      name: Cheatsheets
+      url: /cheatsheets/
+    - identifier: videos
+      name: Videos
+      url: /videos
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 6
+    - identifier: rss
+      name: RSS
+      url: /index.xml
+      weight: 7
+params:
+  dateFmt: "2006-01-02"
+  abbrDateFmt: "Jan 2"
+  description: "Blogs, Security CTFs & Tutorials"
+
+  # TODO: Remove the need of this since is already built-in in the smigle-lagom
+  wikiDirs:
+    - cheatsheets
+    - resources
+
+  latest:
+    enabled: true
+    count: 3
+
+  ##
+  ## Options for overriding theme or page defaults
+  ##
+
+  logo:
+    logoText: "ceso@hogsmeade"
+    logoHomeLink: "/"
+    logoCursorColor: "#808080"
+
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
+  social:
+    - name: GitHub
+      url: https://github.com/ceso
+    - name: YouTube
+      url: https://youtube.com/c/LeandroLemos
+    - name: Twitch
+      url: https://twitch.tv/0xc350
