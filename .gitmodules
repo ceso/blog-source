@@ -1,0 +1,4 @@
+[submodule "themes/smigle-lagom"]
+	path = themes/smigle-lagom
+	url = https://github.com/ceso/smigle-lagom.git
+  update = merge

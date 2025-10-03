@@ -1,0 +1,4 @@
+---
+title: "Hacking"
+type: wiki
+---

@@ -1,0 +1,89 @@
+baseURL: https://ceso.github.io/
+publishDir: ceso.github.io
+buildDrafts: false
+enableRobotsTXT: false
+enableEmoji: false
+canonifyURLs: true
+languageCode: en-gb
+theme: "smigle-lagom"
+title: Ceso Adventures
+
+pagination:
+  pagerSize: 10
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: whoami
+      name: Whoami
+      url: /whoami/
+      weight: 2
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 3
+    - identifier: cheatsheets
+      name: Cheatsheets
+      url: /cheatsheets/
+      weight: 4
+    - identifier: resources
+      name: Resources
+      url: /resources
+      weight: 5
+    - identifier: videos
+      name: Videos
+      url: /videos
+      weight: 6
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 7
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 8
+    - identifier: rss
+      name: RSS
+      url: /index.xml
+      weight: 9
+
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
+params:
+  subtitle: "Blogs, Security CTFs & Tutorials"
+  author: "Ceso"
+  brandIconFile: "images/site/logo.svg"
+  mainSections:
+    - posts
+  # Date format configurations
+  dateFmt: "2006-01-02"
+  abbrDateFmt: "Jan 2"
+
+  # TODO: Remove the need of this since is already built-in in the smigle-lagom
+  wikiDirs:
+    - cheatsheets
+    - resources
+  # Latest posts section on homepage
+  latest:
+    enabled: true
+    count: 3
+
+  # Social links (appears in footer)
+  social:
+    - name: GitHub
+      url: https://github.com/ceso
+    - name: YouTube
+      url: https://youtube.com/c/LeandroLemos
+    - name: Twitch
+      url: https://twitch.tv/0xc350
+
+  # Post navigation options
+  post_nav:
+    enabled: true  # Enable/disable previous/next navigation
+    show_title: false  # Show post titles in navigation
