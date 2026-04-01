@@ -98,7 +98,7 @@ Now that I talked about how I approach my learning, how this is transfered to Cy
 
 My journey into IT started back in 2014 as a Jr. Linux Sysadmin, since then I have been climbing up some seniorities/companies in such position and also starting to move more to a DevOps role. I always have been quite attracted to the idea of breaking things (more being as a child I learned about the world and played with toys by breaking), but never got the spirit to study about it, late at 2019 I discovered Hack The Box, and since then I keep falling in love with Cybersec even more.
 
-So, I started playing in HTB for some months, after that I went after OSCP and saved it at my first try <insert happy face expressions here> (struggled a lot during the exam, you can read more about it in my post, the link is in the preface). The sad news is that OSCP is just the tip of the iceberg, there is more and more things around to smash your head against it (best this way, you will always have something to keep you entertained), then now...what???
+So, I started playing in HTB for some months, after that I went after OSCP and saved it at my first try &lt;insert happy face expressions here&gt; (struggled a lot during the exam, you can read more about it in my post, the link is in the preface). The sad news is that OSCP is just the tip of the iceberg, there is more and more things around to smash your head against it (best this way, you will always have something to keep you entertained), then now...what???
 
 Well, as i said about the goals, I know I want to get better a WebApp pentesting, for this I'm doing the following things:
 
