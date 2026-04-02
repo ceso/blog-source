@@ -84,6 +84,9 @@ params:
       url: https://twitch.tv/0xc350
 
   # Post navigation options
+  # disable-javascript.org custom message (HTML file path relative to project root)
+  disableJsMessageFile: "static/files/disable-javascript.html"
+
   post_nav:
     enabled: true  # Enable/disable previous/next navigation
     show_title: false  # Show post titles in navigation
