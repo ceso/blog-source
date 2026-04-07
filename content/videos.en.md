@@ -9,6 +9,10 @@ type: posts
 layout: single
 ---
 
+{{< notice >}}
+To avoid Google's YouTube cookies and `doubleclick.net`/`ad_status.js` tracking, this page only shows thumbnails via YouTube's CDN. Should you want to watch a video, click the thumbnail and it will open in a new tab on YouTube. Hover over it first if you want to verify the link points to a valid domain.
+{{< /notice >}}
+
 A compilation of videos from Presentations/Live Streamings given by me.
 
 ## Simulation of OSCP with Hack The Box and VulnHub machines
