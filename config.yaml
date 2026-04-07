@@ -1,9 +1,8 @@
-baseURL: https://ceso.github.io/
+baseURL: https://onikenaz.ovh/
 publishDir: ceso.github.io
 buildDrafts: false
 enableRobotsTXT: false
 enableEmoji: false
-canonifyURLs: true
 languageCode: en-gb
 theme: "smigle-lagom"
 title: Ceso Adventures
